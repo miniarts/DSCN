@@ -1,0 +1,260 @@
+
+/* HEADER
+============================== */
+/* GENERAL
+-------------------- */
+#t3-header {
+    padding:0px;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 110px;
+    z-index: 99;
+    background-color: #fff;
+    box-shadow: 1px -1px 2px 0px;
+}
+.top-fixed {
+    position: absolute;
+    z-index: 999;
+}
+.t3-header .row {
+    position: relative;
+    margin:0px;
+}
+/* ANIMATIONS
+-------------------- */
+body.headerHide #t3-header {
+	height: 90px;
+	-webkit-transform: translateY(-100%);
+	-moz-transform: translateY(-100%);
+	-o-transform: translateY(-100%);
+	transform: translateY(-100%);
+	opacity: 0.6;
+	-webkit-transition: 	0.3s height, 0.3s -webkit-transform, 	0.4s opacity;
+    -moz-transition: 		0.3s height, 0.3s -moz-transform, 		0.4s opacity;
+    -o-transition: 			0.3s height, 0.3s -o-transform, 		0.4s opacity;
+    transition: 			0.3s height, 0.3s transform, 			0.4s opacity;
+    -webkit-transition-delay: 	0.25s;
+    -moz-transition-delay: 		0.25s;
+    -o-transition-delay: 		0.25s;
+    transition-delay: 			0.25s;
+}
+body.headerHide #logo {
+	-webkit-transform: translateY(-80px);
+	-moz-transform: translateY(-80px);
+	-o-transform: translateY(-80px);
+	transform: translateY(-80px);
+	opacity: 0.6;
+	-webkit-transition: 	0.5s -webkit-transform, 0.3s opacity;
+    -moz-transition: 		0.5s -moz-transform, 0.3s opacity;
+    -o-transition: 			0.5s -o-transform, 0.3s opacity;
+    transition: 			0.5s transform, 0.3s opacity;
+    -webkit-transition-delay: 	0.1s;
+    -moz-transition-delay: 		0.1s;
+    -o-transition-delay: 		0.1s;
+    transition-delay: 			0.1s;
+}
+body.headerShow #t3-header {
+	height: 110px;
+	transform: translateY(0);
+	opacity: 1;
+	-webkit-transition: 	0.3s height, 0.5s -webkit-transform, 0.4s opacity;
+    -moz-transition: 		0.3s height, 0.5s -moz-transform, 0.4s opacity;
+    -o-transition: 			0.3s height, 0.5s -o-transform, 0.4s opacity;
+    transition: 			0.3s height, 0.5s transform, 0.4s opacity;
+}
+body.headerShow #logo {
+	transform: translateY(0);
+	opacity: 1;
+	-webkit-transition: 	0.5s -webkit-transform 0.2s, 0.3s opacity 0.2s;
+    -moz-transition: 		0.5s -moz-transform 0.2s, 0.3s opacity 0.2s;
+    -o-transition: 			0.5s -o-transform 0.2s, 0.3s opacity 0.2s;
+    transition: 			0.5s transform 0.2s, 0.3s opacity 0.2s;
+}
+
+
+/* LOGO
+-------------------- */
+.t3-header .logo {
+	display: table;
+	top:20px;
+	left: 50px;
+	-webkit-transition: 	0.5s filter;
+    -moz-transition: 		0.5s filter;
+    -o-transition: 			0.5s filter;
+    transition: 			0.5s filter;
+    text-align: left;
+}
+.t3-header .logo > div {
+    display: inline-block;
+    vertical-align: top;
+}
+.t3-header .logo-image p {
+	line-height: 0;
+}
+.t3-header .logo-image img {
+	width: 135px;
+	height: auto;
+}
+.t3-header .logo-image .inthecity-logo img {
+	margin-top:5px;
+	width: 235px;
+}
+.t3-header .logo .head-info {
+    margin-left: 19px;
+    position: absolute;
+}
+.t3-header .logo .head-info > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+.t3-header .logo .head-info .head-sponsor .custom {
+    text-align: center;	
+}
+.t3-header .logo .head-info .head-sponsor p {
+	font-size: 1em;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.t3-header .logo .head-info .head-sponsor p img {
+    width: 50px;
+    height: auto;
+    margin-top: 5px;	
+}
+.t3-header .logo .head-info .head-dates {
+    white-space: nowrap;
+}
+.t3-header .logo .head-info .head-dates p {
+    font-weight: 400;
+    line-height: 1.2;
+    color: #000;
+    font-size: 1.6em;
+    margin-top: 20px;
+}
+.t3-header .logo .head-info .head-dates .date-word-break { 
+	display: none;
+}
+	
+/* SHOW SWITCH
+-------------------- */
+.showswitch {
+    display: inline-block;
+    margin-left: 20px;
+    width: 30px;
+}
+.showswitch a {
+    font-size: 0.8em;
+    background-color: #d4d4d4;
+    padding: 2px;
+    border-radius: 4px;
+    color: @border-color;
+    width: 100%;
+    display: inline-block;  
+    height: 42px;
+    -webkit-transition:     0.2s background-color ease-out;
+    -moz-transition:        0.2s background-color ease-out;
+    -o-transition:          0.2s background-color ease-out;
+    transition:             0.2s background-color ease-out;
+}
+.showswitch a:after {
+    content: '';
+    display: block;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    height: 50%;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+    top:0;
+    -webkit-transition:     0.2s top ease-out;
+    -moz-transition:        0.2s top ease-out;
+    -o-transition:          0.2s top ease-out;
+    transition:             0.2s top ease-out;
+}
+.showswitch a span {
+    display: block;
+    padding: 4px;
+    width: 100%;
+    float: left;
+    text-align: center;
+    border-radius: 2px;
+    padding-top: 6px;
+    position: relative;
+    z-index: 2;
+}    
+.showswitch a span.cn {
+    margin-bottom: 2px;
+    
+}
+.showswitch a span.en {
+    font-weight: 400;
+    color: @border-color;
+}
+.showswitch:hover a {
+    background-color: @red;
+    color: #fff;
+}
+.showswitch:hover a:after {
+    top:50%;
+}
+
+
+
+/* SECONDARY NAV
+-------------------- */
+.breadcrumbs {
+    background-color: #f5f5f5;
+    position: relative;
+    z-index: 9;
+    position: absolute;
+    top:110px;
+}
+.breadcrumb {
+    font-size: 1.4em;
+    text-align: left;
+    padding: 12px 50px 12px 189px;
+    display: inline-block;
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.inthecity .breadcrumb {
+    padding-left: 290px;
+}
+.breadcrumb > .active {
+    display: none;
+}
+.breadcrumb li .pathway {
+    color: #b7b7b7;
+}   
+.breadcrumb li span {
+    color: @red;
+} 
+.breadcrumb:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,f5f5f5+100&0+0,1+100 */
+    background: -moz-linear-gradient(left,  rgba(245,245,245,0) 0%, rgba(245,245,245,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(245,245,245,0) 0%,rgba(245,245,245,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f5f5f5', endColorstr='#f5f5f5',GradientType=1 ); /* IE6-9 */
+}   
+
+.prev-page {
+    font-size: 1.4em;
+    float: right;
+    padding: 12px 24px
+}
+.prev-page a {
+    color: #b7b7b7;
+    text-decoration: none;
+}
+.prev-page a i {
+    font-size: 0.9em;
+    margin-left: 10px;  
+}   

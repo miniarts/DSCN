@@ -1,0 +1,320 @@
+
+
+/* BANNER 
+-------------------- */
+.banner, .banner-inner {
+  width: 100%;
+  height: 100%;
+}
+.banner {
+  overflow: hidden;
+  position: relative;
+}
+.banner-img { 
+  position: absolute;
+  top: 0px;;
+  left: 0px;
+  right: 0;
+  bottom: 200px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+// .home{
+//   .banner-img{
+//     bottom: 0;
+//   }
+// }
+.banner-video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: transparent;
+  video {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    // top: 50%;
+    // left: 50%;
+    // -webkit-transform:  translate(-50%, -50%);
+    // -moz-transform:   translate(-50%, -50%);
+    // -o-transform:     translate(-50%, -50%);
+    // transform:      translate(-50%, -50%);
+    &::-webkit-media-controls-panel,
+    &::--webkit-media-controls-play-button,
+    &::-webkit-media-controls-start-playback-button {
+      display: none!important;
+      -webkit-appearance: none;
+    }
+  }  
+  .video-backup {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-image: url(/images/system/DS_Video_Poster-V1.jpg);
+    background-color: #000;
+    background-size: cover;
+    background-position: 49% center;
+    z-index: -1;
+    -webkit-animation:  4s videoDelay 0.6s forwards;
+    -moz-animation:     4s videoDelay 0.6s forwards;
+    -o-animation:       4s videoDelay 0.6s forwards;
+    animation:          4s videoDelay 0.6s forwards;
+  }
+  .video-bg {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    z-index: -2;
+  }
+}
+@media (min-aspect-ratio: 14/9) {
+  .home .banner-video video {
+    min-width: 100%;
+  }
+}
+@media (max-aspect-ratio: 14/9) {
+  .home .banner-video video {
+    height: 100%;
+  }
+}
+
+@-webkit-keyframes videoDelay {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-moz-keyframes videoDelay {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@-o-keyframes videoDelay {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+@keyframes videoDelay {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.banner-content {
+  display: table;
+  width: 100%;
+  height: 100%;
+  padding:0px 50px;
+  &:after {
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+50,000000+100&1+0,0+100 */
+    background: -moz-linear-gradient(left,  rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  rgba(0,0,0,1) 0%,rgba(0,0,0,0.5) 50%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
+  }
+}
+.banner-content-inner {
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  padding: 120px 50px 0;
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+}
+
+
+// @-webkit-keyframes bannerZoom {
+//     0% {
+//         -webkit-transform:  translate3d(0px, 0px, 0px);
+//     }
+//     100% {
+//         -webkit-transform:  translate3d(100px, 100px, 0px);
+//     }
+// }
+// @-moz-keyframes bannerZoom {
+//     0% {
+//         -moz-transform:   scale(1);
+//     }
+//     100% {
+//         -moz-transform:   scale(1.1);
+//     }
+// }
+// @-o-keyframes bannerZoom {
+//     0% {
+//         -o-transform:     scale(1);
+//     }
+//     100% {
+//         -o-transform:     scale(1.1);
+//     }
+// }
+// @keyframes bannerZoom {
+//     0% {
+//         transform:      scale(1);
+//     }
+//     100% {
+//         transform:      scale(1.1);
+//     }
+// }
+
+.nobanner {
+  height: 110px;
+}
+
+/* more arrow
+--------------- */
+.home .banner:after, 
+.banner-titleonly .banner.showbanner:after {
+  content: "\f107";
+  font-family: fontAwesome;
+  color: #fff;
+  position: absolute;
+  font-size: 2.8em;
+  margin-bottom: 20px;
+  // margin-left: -10px;
+  right:40px;
+  opacity: 1;
+  -webkit-transition: 0.5s opacity;
+  -moz-transition: 0.5s opacity;
+  -o-transition: 0.5s opacity;
+  transition: 0.5s opacity;
+  -webkit-animation:  homeScrollDown 0.6s ease infinite alternate;
+  -moz-animation:   homeScrollDown 0.6s ease infinite alternate;
+  -o-animation:     homeScrollDown 0.6s ease infinite alternate;
+  animation:      homeScrollDown 0.6s ease infinite alternate;
+  z-index: 9;
+}
+.banner-titleonly.invertarrow .banner.showbanner:after {
+  color: @background-dark;
+}
+@-webkit-keyframes homeScrollDown {
+    0% {
+      bottom:0px;
+    }
+
+    100% {
+      bottom:20px;
+    }
+}
+@-moz-keyframes homeScrollDown {
+    0% {
+      bottom:0px;
+    }
+
+    100% {
+      bottom:20px;
+    }
+}
+@-o-keyframes homeScrollDown {
+    0% {
+      bottom:0px;
+    }
+
+    100% {
+      bottom:20px;
+    }
+}
+@keyframes homeScrollDown {
+    0% {
+      bottom:0px;
+    }
+
+    100% {
+      bottom:20px;
+    }
+}
+.scrolled .banner.showbanner:after {
+  opacity: 0;
+}
+
+/* category banner
+--------------- */
+html.view-category .banner {
+  height: 100%;
+  
+}
+html.view-category .banner .banner-img {
+  bottom: 220px;
+  background-position: center bottom;
+}
+.t3-content .blog.banner {
+  overflow: visible;
+}
+.t3-content .blog.banner .blog-inner {
+  position: absolute;
+  width: 100%;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+/* banner flip
+--------------- */
+html.view-category.banner-flip .t3-content .blog.banner {
+    position: absolute;
+    top: 148px;
+}    
+html.view-category.banner-flip .banner .banner-img {
+  top: 220px;
+  bottom: 0px;
+  background-position: center bottom;
+}
+html.banner-flip.view-category .t3-content .blog.banner .page-header  {
+  -webkit-transform:  translateY(0);
+  -moz-transform:   translateY(0);
+  -o-transform:     translateY(0);
+  transform:      translateY(0);
+}
+
+/* banner title only
+--------------- */
+.t3-content .blog.banner {
+  height: 100%;
+}
+.t3-content .blog.banner .page-header {
+  padding-top: 110px;
+    padding-bottom: 60px;
+    background-color: inherit;
+    position: absolute;
+    width: 100%;
+    -webkit-transform:  translateY(-100%);
+    -moz-transform:   translateY(-100%);
+    -o-transform:     translateY(-100%);
+    transform:      translateY(-100%);
+}    
+.t3-content .blog.banner .blog-inner {
+  position: static;
+  -webkit-transform:  translateY(0);
+    -moz-transform:   translateY(0);
+    -o-transform:     translateY(0);
+    transform:      translateY(0);
+  padding:0px 0px 0px;
+}
+
+

@@ -1,0 +1,99 @@
+
+/* QUIX sub pages */
+.quix_subpage{
+    .qx-row{
+        margin: 0;
+    }
+    .qx-column{
+        padding: 0;
+        .qx-element{
+            position: relative;
+            overflow: hidden;
+            &:hover{
+                cursor: pointer;
+                .qx-image-wrapper .qx-img{
+                    transform: scale(1.2);
+                    opacity:.4;
+                }
+            }
+            &:hover,
+            &:active,
+            &:focus{
+                a{
+                    text-decoration: none;
+                }
+                .qx-page-link-wrap{
+                    &:after{
+                        bottom: 7%;
+                        right: 3.5%;
+                    }
+                }
+            }
+            .qx-image-wrapper{
+                background-color: @black;
+                .qx-img{
+                    min-height: 320px;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    transition: opacity .5s, transform 18s;
+                    opacity: .6;
+                }
+            }
+            .qx-page-link-wrap{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                left: 0;
+                color: @white;
+                height: 100%;
+                z-index: 1;
+                .qx-image-title{
+                    width: 100%;
+                    display: table;
+                    height: 100%;
+                    h4{
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.45);
+                        padding: 14%;
+                        text-align: left;
+                        line-height: 1;
+                    }
+                }
+                &:after{
+                    content: "\f106";
+                    font-family: fontAwesome;
+                    position: absolute;
+                    bottom: -10%;
+                    right: -10%;
+                    transform: rotate(134deg);
+                    font-size: 2.5rem;
+                    transition: all .3s;
+                }
+            }
+            .qx-page-content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding:0;
+                height: 100%;
+                width: 100%;
+                .rounded-btn-view{
+                    width: 100%;
+                    background: none;
+                    margin: 0;
+                    height: 100%;
+                    top: 44%;
+                    position: absolute;
+                    left: 0;
+                    text-indent: -2000px;
+                    overflow: hidden;
+                    &:hover{
+                        background-color: none !important;
+                    }
+                }
+            }
+        }
+    }
+}
