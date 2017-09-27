@@ -1,8 +1,8 @@
 /* INFO
 ==============================
-  - Show:   Design Shanghai 
-  - Css by:   Joe Thom
-  - Version:  1.0.0
+	- Show:		Design Shanghai	
+	- Css by:   Joe Thom
+	- Version:  1.0.0
 */
 /* X LARGE DESKTOP
 ============================== */
@@ -22,7 +22,7 @@
   /* HEADER
 -------------------- */
   /*.t3-header .main-navbar .navbar-nav > li > a {
-      padding: 10px 10px;
+	    padding: 10px 10px;
     }*/
   .t3-header .logo .head-info .head-dates p {
     font-size: 1.6em;
@@ -43,7 +43,7 @@
     padding-top: 320px !important;
   }
   .mnwall_container.home-sections .mnwall-item {
-    /*    padding-top: 210px !important; */
+    /* 		padding-top: 210px !important; */
   }
   body #t3-mainbody .mnwall_container.exhibitor-list .mnwall-item {
     padding-top: 260px !important;
@@ -69,7 +69,7 @@
     padding-top: 144px;
   }
   /* .t3-header .main-navbar .navbar-nav > li > a {
-      padding: 10px 10px;
+	    padding: 10px 10px;
     }*/
   .breadcrumb,
   .prev-page {
@@ -437,7 +437,7 @@
   }
   .t3-header .logo .head-info .head-dates {
     position: relative;
-    /*      top: 35px; */
+    /* 	    top: 35px; */
     padding-left: 0px;
   }
   .t3-header .logo .head-info .head-dates p {
@@ -479,7 +479,6 @@
   #mob-navbar-btn .btn-wrap .btn-bar.mid {
     top: -9px;
   }
-  .page-navigation,
   .navigation.post-navigation,
   .navigation.post-navigation .nav-links,
   .content-footer .footer-inner .page-navigation {
@@ -592,13 +591,13 @@
   .mnwall_container.exhibitor-list .mnwall-item:nth-child(6),
   .mnwall_container.exhibitor-list .mnwall-item:nth-child(7),
   .mnwall_container.exhibitor-list .mnwall-item:nth-child(8) {
-    /*      display: none; */
+    /* 	    display: none; */
   }
   body #t3-mainbody .mnwall_container.news-list .mnwall-item {
     width: 100% !important;
   }
   .mnwall_container.news-list .mnwall-item:nth-child(3) {
-    /*      display: none; */
+    /* 	    display: none; */
   }
   .mainbody-topblocks .block-header a,
   .mainbody-bottomblocks .block-header a,
@@ -655,7 +654,7 @@
     font-size: 1.6em;
   }
   .t3-header .logo .head-info .head-dates {
-    /*      top: 28px; */
+    /* 	    top: 28px; */
   }
   .t3-header .logo .head-info .head-dates .date-word-break {
     display: inline;
