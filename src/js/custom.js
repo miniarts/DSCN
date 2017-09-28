@@ -73,11 +73,9 @@
 
             $btn.on('click', function() {
                 if ($wrapper.hasClass('mobnav-closed')) {
-                    //isMobNavOpen = true;
                     $wrapper.removeClass('mobnav-closed');
                     $wrapper.addClass('mobnav-open');
                 } else {
-                    //isMobNavOpen = false;
                     $wrapper.addClass('mobnav-closed');
                     $wrapper.removeClass('mobnav-open');
                 }
@@ -87,8 +85,8 @@
             var docElemStyle = document.documentElement.style,
                 transitionProp = typeof docElemStyle.transition == 'string' ? 'transition' : 'WebkitTransition';
 
-                $.each(el, function(){
-                    $(this).css(transitionProp + 'Delay', i*speed + 'ms');
+                $.each(el, function(index){
+                    $(this).css(transitionProp + 'Delay', index*speed + 'ms');
                 });      
         },
         
