@@ -1243,15 +1243,15 @@ html.banner-flip.view-category .t3-content .blog.banner .page-header {
   max-width: 100%;
   height: auto;
 }
-.scrolled .t3-content .item-page .page-split.page-header {
-  position: fixed;
+.scrolled #t3-content .item-page .page-split.page-header {
+  position: fixed !important;
   padding-top: 0px;
   margin-top: 50px;
 }
 .titleHide .t3-content .item-page .page-split.page-header .header-inner {
   opacity: 0;
 }
-html body #t3-content .item-page .page-header {
+#t3-content .item-page.exhib_page .page-header {
   top: 0 !important;
   position: relative !important;
   padding-bottom: 40px !important;

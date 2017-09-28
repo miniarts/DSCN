@@ -93,6 +93,9 @@
   body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
     height: 245px;
   }
+  #mnwall_iso_container_3.mnwall_iso_container .mnwall-photo-link {
+    height: 245px !important;
+  }
   .block-inner .ug-theme-carousel .ug-thumb-wrapper.ug-tile {
     width: 320px !important;
     height: 320px !important;

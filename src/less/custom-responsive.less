@@ -97,21 +97,22 @@
 	/* BODY
 -------------------- */
 
-
 	/* MODULES
 -------------------- */
 	body #t3-mainbody .mnwall_container.subpage-list .mnwall-item {
 	    padding-top: 280px !important;
 	}
-	.mnwall_container.home-sections .mnwall-item {
-		
-	}
 	body #t3-mainbody .mnwall_container.exhibitor-list .mnwall-item {
     	padding-top: 220px !important;
     }
-    body #t3-mainbody .mnwall_container.news-list .mnwall-cover, body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
+    body #t3-mainbody .mnwall_container.news-list .mnwall-cover,
+    body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
 	    height: 245px;
 	}
+	//override for crazy media query
+	#mnwall_iso_container_3.mnwall_iso_container .mnwall-photo-link{  
+    	height: 245px !important;
+    }
 	.block-inner .ug-theme-carousel .ug-thumb-wrapper.ug-tile {
 		width:320px !important;
 		height:320px !important;
@@ -122,6 +123,7 @@
 
 
 }	
+
 
 
 /* LAPTOP
