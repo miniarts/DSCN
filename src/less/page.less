@@ -249,12 +249,13 @@
     z-index: 9;
     line-height: 0;
     .block {
-        display: inline-block;
-        float: none !important;
-        height: auto;
-        vertical-align: middle;
-        padding: 0px;
-        width: 100%;
+        &[class$="-md-6"]{
+            display: inline-block;
+            float: none !important;
+            height: auto;
+            vertical-align: middle;
+            padding: 0px;
+        }
     }
     .block-inner {
         display: inline-block;

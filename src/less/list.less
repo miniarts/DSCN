@@ -80,19 +80,13 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
 }
 .mnwall_iso_container .mnwall-item .mnwall-item-img a {
     opacity: 0.9;
-    -webkit-transition:     0.5s opacity, 8s -webkit-transform;
-    -moz-transition:        0.5s opacity, 8s -moz-transform;
-    -o-transition:          0.5s opacity, 8s -o-transform;
-    transition:             0.5s opacity, 8s transform;
+    transition: 0.5s opacity, 8s transform;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;    
 }
 .mnwall_iso_container .mnwall-item:hover .mnwall-item-img a {
     opacity: 0.4;
-    -webkit-transform:      scale(1.1);
-    -moz-transform:         scale(1.1);
-    -o-transform:           scale(1.1);
     transform:              scale(1.1);
 }
 .mnwall_iso_container .mnwall-item .mnwall-item-img a img {
@@ -108,10 +102,7 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-ic
     right: 0px;
     bottom: 0px;
     opacity: 0;
-    -webkit-transition:     0.3s opacity, 0.3s -webkit-transform;
-    -moz-transition:        0.3s opacity, 0.3s -moz-transform;
-    -o-transition:          0.3s opacity, 0.3s -o-transform;
-    transition:             0.3s opacity, 0.3s transform;
+    transition: 0.3s opacity, 0.3s transform;
 }
 body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit {
     background-color: #fff;
@@ -127,10 +118,7 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-ic
     width: 18px;
 }
 body #t3-mainbody .mnwall_iso_container .mnwall-item:hover .mnwall-item-img .corner-icon {
-    -webkit-transform:      translate(-19px, -19px);
-    -moz-transform:         translate(-19px, -19px);
-    -o-transform:           translate(-19px, -19px);
-    transform:              translate(-19px, -19px);
+    transform: translate(-19px, -19px);
     opacity: 0.9;
 }
 .mnwall_iso_buttons a {
@@ -144,9 +132,9 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item {
     padding-top: 250px !important;
     position: relative !important;
     //override for crazy media query
-    left: 0 !important;
-    top: 0 !important;
-    transform: none !important;
+    // left: 0 !important;
+    // top: 0 !important;
+    // transform: none !important;
 }
 body #t3-mainbody .mnwall_container.home-sections .mnwall-item:first-of-type {
     width: 100% !important;
@@ -194,8 +182,8 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
 /* VIDEO LIST
 -------------------- */
 .video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
-  width: 50% !important;
-  position: relative !important;
+    width: 50% !important;
+    position: relative !important;
     float: left !important;
     left: 0px !important;
     top: 0px !important;
@@ -249,10 +237,7 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
 .bannergroup .banneritem .bannerimg img {
 	max-width: 100%;
 	max-height: 100%;
-    -webkit-transform: 	translateY(-50%);
-    -moz-transform: 	translateY(-50%);
-    -o-transform: 		translateY(-50%);
-    transform: 			translateY(-50%);
+    transform: translateY(-50%);
 }
 .mainbody-bottomblocks .bannergroup {
     padding: 19px 50px;	
@@ -285,8 +270,6 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
     font-size: 1.6em;
     line-height: 150%;
     text-decoration: none;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
     box-shadow: none !important;
 }
 .schedule-list .nav-tabs li:first-of-type a {
@@ -345,58 +328,6 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
     }
 }
 
-// #t3-mainbody .mnwall_container{
-//     &.exhibitor-list{
-//         .mnwall-item {
-//             width: 25% !important;
-//             padding-top: 300px !important;
-//             position: relative !important;
-//             //override
-//             left: 0 !important;
-//             top: 0 !important;
-//             transform: none !important;
-//             .mnwall-item-outer-cont {
-//                 position: absolute;
-//                 top:0;
-//                 left: 0;
-//                 right: 0;
-//                 bottom: 0;
-//             }
-//         }
-//         .mnwall-cover, 
-//         .mnwall-cover * {
-//           height: 100%;
-//         }
-//         .mnwall-item-inner {
-//             padding:19px !important;
-//             display: table;
-//             * {
-//                 height: auto;
-//                 display: table-row-group;
-//                 vertical-align: bottom;
-//                 line-height: 1;
-//             }
-//             .mnwall-title {
-//               padding:0px;
-//               a {
-//                     text-transform: capitalize !important;
-//                     font-size: 2em !important;
-//                     line-height: 1 !important;
-//                     color: #fff !important;
-//                     font-weight: 300;
-//                     display: block;
-//                     padding-bottom: 5px;
-//                 }
-//             }
-//             .mnwall-item-category a {
-//                 color: rgba(255,255,255,0.4) !important;
-//                 font-size: 1.4em !important;
-//             }
-//         }
-//     }   
-// }
-
-
 /* hide link through
 --------------- */
 .mnwall_container.speakers-list .mnwall-photo-link {
@@ -404,66 +335,13 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
     background-size: cover;
 }
 
-/* news list
-// --------------- */
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item {
-//     width: 33.33333% !important;
-//     position: relative !important;
-//     //override for crazy media query
-//     left: 0 !important;
-//     top: 0 !important;
-//     transform: none !important;
-// }
-// body #t3-mainbody .mnwall_container.news-list .mnwall-cover, 
-// body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
-//     height: 325px;
-// }
-// body #t3-mainbody .mnwall_container.news-list  .mnwall_iso_container .mnwall-item .mnwall-item-inner {
-//     background-color:rgba(255,255,255,0.00);
-//     -webkit-transition:     0.5s background-color;
-//     -moz-transition:        0.5s background-color;
-//     -o-transition:          0.5s background-color;
-//     transition:             0.5s background-color;
-// }
-// body #t3-mainbody .mnwall_container.news-list  .mnwall_iso_container .mnwall-item:hover .mnwall-item-inner {
-//     background-color:rgba(255,255,255,0.05) !important;
-// }
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title {
-//     padding:19px 19px 10px;
-//     position: relative;
-// }
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title a {
-//     text-transform: capitalize !important;
-//     font-size: 2em;
-//     color: #fff !important;
-//     font-weight: 300;
-//     display: block;
-//     overflow: hidden;
-//     padding-right: 100px;
-//     text-overflow: ellipsis;
-//     white-space: nowrap;
-//     line-height: 24px;
-// }
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title .mnwall-date {
-//     position: absolute;
-//     right: 0px;
-//     top: 10px;
-//     color: #b7b7b7;
-//     font-size: 1.6em;
-//     text-transform: uppercase;
-//     padding: 10px 15px 0;
-//     line-height: 24px;
-// }
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-desc {
-//     padding: 0px 19px 50px;
-//     font-size: 1.6em;
-//     color: rgba(184, 184, 184, 0.6) !important;
-//     line-height: 1.4em;
-// }    
-// body #t3-mainbody .mnwall_container.news-list .mnwall-item .mnwall-item-img a {
-//     opacity: 0.6;
-// }
+
 #t3-mainbody .mnwall_container{
+    .mnwall-item{ //override for all
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+    }
    &.news-list{
         .mnwall-cover, 
         .mnwall-cover * {
@@ -550,9 +428,9 @@ body #t3-mainbody .mnwall_container{
         .mnwall-item {
             width: 33.333333% !important;
             position: relative !important;
-            top: 0 !important;
-            left: 0 !important;
-            transform: none !important;
+            // top: 0 !important;
+            // left: 0 !important;
+            // transform: none !important;
         }
     }
     &.subpage-list .mnwall-item {
