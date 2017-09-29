@@ -23,11 +23,7 @@
     width: 100%;
     display: inline-block;
 }  
-// .view-article .t3-mainbody{
-// // .container-fluid {. //don't change bootstrap
-// 	padding-left: 0px;
-// 	padding-right: 0px;
-// }
+
 //.container-fluid, .row,  //don't change bootstrap
 .view-article .item-page, 
 .view-article .mainbody-topblocks, 
@@ -249,12 +245,12 @@
     z-index: 9;
     line-height: 0;
     .block {
-        &[class$="-md-6"]{
+        padding: 0px;
+        &.col-md-6{
             display: inline-block;
             float: none !important;
             height: auto;
-            vertical-align: middle;
-            padding: 0px;
+            vertical-align: middle;    
         }
     }
     .block-inner {
