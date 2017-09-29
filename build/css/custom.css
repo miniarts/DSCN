@@ -2103,6 +2103,7 @@ body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-titl
   vertical-align: middle;
   padding: 0px 50px;
   line-height: 150%;
+  text-shadow: 1px 1px 1px black;
 }
 body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-title a {
   text-transform: capitalize !important;
