@@ -1,14 +1,29 @@
 
 @red: #d0043c;
+@blue: #428bca;
 @white: #fff;
 @black: #000;
+@grey-light: #999;
+
+
 @background-dark: #141414;
 @border-color: #777;
-@footer-text-color: #999;
+@footer-text-color: @grey-light;
 @footer-background:#000;
 
-@screen-sm-max: 600;
+@screen-sm-max: 600px;
+
+
+/* MIXINS AND COMMON STYLES*/
 
 .screen-sm-max(@rules) {
     @media (max-width: @screen-sm-max) { @rules(); }
+}
+
+.icon-search{
+	&:after{
+	    font-family: FontAwesome;
+	    content: "\f002";
+	    font-size: 1rem;
+	}	
 }

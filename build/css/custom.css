@@ -4,6 +4,13 @@
 
     Modified plain css to less and sprit it into smaller files :-)
 */
+/* MIXINS AND COMMON STYLES*/
+.icon-search:after,
+.t3-header .main-navbar .navbar-nav > li > a[href="/search"]:after {
+  font-family: FontAwesome;
+  content: "\f002";
+  font-size: 1rem;
+}
 /* RESET
 ============================== */
 html,
@@ -192,6 +199,9 @@ body .banner .site-btn {
   text-indent: 0px;
   position: absolute;
   right: 0;
+}
+.t3-header .main-navbar .navbar-nav > li > a[href="/search"] {
+  font-size: 0;
 }
 .t3-header .main-navbar .navbar-nav > li:not(:last-of-type).active a:not(.home-icon) {
   color: #d0043c;
@@ -1568,6 +1578,168 @@ body #t3-mainbody .mainbody-bottomblocks .block-header.carousel h3 {
 }
 .navigation.post-navigation .nav-links .nav .links:hover {
   color: #d0043c;
+}
+.view-search #t3-mainbody {
+  margin: auto;
+  float: none;
+  display: block;
+  padding: 2% 4%;
+}
+.view-search #t3-mainbody .btn-toolbar {
+  margin: 2rem auto;
+  width: 92%;
+}
+.view-search #t3-mainbody .btn-toolbar .searchInput {
+  width: 80%;
+  margin: 0;
+}
+.view-search #t3-mainbody .btn-toolbar .searchBtn {
+  width: 20%;
+  margin: 0;
+}
+.view-search #t3-mainbody .btn-toolbar button,
+.view-search #t3-mainbody .btn-toolbar input {
+  width: 100%;
+  height: 60px;
+  font-size: 1.3rem;
+}
+.view-search #t3-mainbody .btn-toolbar input {
+  border-radius: 4px 0 0 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.view-search #t3-mainbody .btn-toolbar input:focus {
+  border-color: #d0043c;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.view-search #t3-mainbody .btn-toolbar button {
+  border-radius: 0 4px 4px 0;
+  color: #fff;
+  background-color: #d0043c;
+  text-transform: uppercase;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.view-search #t3-mainbody .btn-toolbar button .icon-search,
+.view-search #t3-mainbody .btn-toolbar button .t3-header .main-navbar .navbar-nav > li > a[href="/search"] {
+  margin-right: .5rem;
+  font-size: inherit;
+}
+.view-search #t3-mainbody .btn-toolbar button:hover {
+  background-color: #9e032e;
+}
+@media (max-width: 600px) {
+  .view-search #t3-mainbody .btn-toolbar button {
+    font-size: 0;
+  }
+  .view-search #t3-mainbody .btn-toolbar button .icon-search,
+  .view-search #t3-mainbody .btn-toolbar button .t3-header .main-navbar .navbar-nav > li > a[href="/search"] {
+    margin-right: 0;
+    font-size: 1.3rem;
+  }
+}
+.view-search .pagination {
+  float: none;
+}
+.view-search div.pagination {
+  text-align: center;
+}
+.view-search div.pagination ul > li {
+  padding: 4px;
+  background-color: transparent;
+  border: none;
+}
+.view-search div.pagination ul > li a {
+  float: none;
+  color: #d0043c;
+  padding: .5rem .9rem;
+  font-size: .8rem;
+}
+.view-search div.pagination ul > li a[title="Start"],
+.view-search div.pagination ul > li a[title="Prev"],
+.view-search div.pagination ul > li a[title="Next"],
+.view-search div.pagination ul > li a[title="End"] {
+  font-size: 0;
+  border: none;
+  padding: .5rem;
+}
+.view-search div.pagination ul > li a[title="Start"]:after,
+.view-search div.pagination ul > li a[title="Prev"]:after,
+.view-search div.pagination ul > li a[title="Next"]:after,
+.view-search div.pagination ul > li a[title="End"]:after {
+  font-size: .8rem;
+  font-family: fontawesome;
+}
+.view-search div.pagination ul > li a[title="Start"]:hover,
+.view-search div.pagination ul > li a[title="Prev"]:hover,
+.view-search div.pagination ul > li a[title="Next"]:hover,
+.view-search div.pagination ul > li a[title="End"]:hover,
+.view-search div.pagination ul > li a[title="Start"]:focus,
+.view-search div.pagination ul > li a[title="Prev"]:focus,
+.view-search div.pagination ul > li a[title="Next"]:focus,
+.view-search div.pagination ul > li a[title="End"]:focus,
+.view-search div.pagination ul > li a[title="Start"]:active,
+.view-search div.pagination ul > li a[title="Prev"]:active,
+.view-search div.pagination ul > li a[title="Next"]:active,
+.view-search div.pagination ul > li a[title="End"]:active {
+  background-color: transparent;
+  color: #9e032e;
+}
+.view-search div.pagination ul > li a[title="Start"]:after {
+  content: "\f100";
+}
+.view-search div.pagination ul > li a[title="Prev"]:after {
+  content: "\f104";
+}
+.view-search div.pagination ul > li a[title="Next"]:after {
+  content: "\f105";
+}
+.view-search div.pagination ul > li a[title="End"]:after {
+  content: "\f101";
+}
+.view-search div.pagination ul > li.active a {
+  background-color: #d0043c;
+  border-color: #d0043c;
+  color: #fff;
+}
+.view-search div.pagination ul > li.disabled a {
+  display: none;
+}
+@media (max-width: 600px) {
+  .view-search div.pagination ul > li {
+    padding: 2px;
+  }
+  .view-search div.pagination ul > li a {
+    padding: .5rem .7rem;
+  }
+}
+@media (max-width: 600px) {
+  .view-search div.pagination {
+    overflow-x: scroll;
+  }
+}
+.search-results {
+  margin-top: 0;
+}
+.search-results li {
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.search-results .result-text {
+  color: #999;
+}
+.search-results .result-category {
+  color: #428bca;
+}
+.search-results .result-title {
+  margin-top: 5px;
+}
+.search-results .result-title a {
+  color: #d0043c;
+}
+.search-results .result-title a:hover {
+  color: #9e032e;
 }
 /* QUIX sub pages */
 .quix_subpage .qx-row {

@@ -1,0 +1,155 @@
+.view-search{
+    #t3-mainbody{
+        margin: auto;
+        float: none;
+        display: block;
+        padding: 2% 4%;
+        .btn-toolbar{
+            margin: 2rem auto;
+            width: 92%;
+            .searchInput{
+                width: 80%;
+                margin: 0;
+            }
+            .searchBtn{
+                width: 20%;
+                margin: 0;
+            }
+            button,
+            input{
+                width: 100%;
+                height: 60px;
+                font-size: 1.3rem;
+            }
+            input{
+                border-radius: 4px 0 0 4px;
+                box-shadow: none;
+                &:focus{
+                    border-color: @red;
+                    box-shadow: none;
+                }
+            }
+            button{
+                border-radius: 0 4px 4px 0;
+                color: @white;
+                background-color: @red;
+                text-transform: uppercase;
+                transition: all .5s;
+                .icon-search{
+                    margin-right: .5rem;
+                    font-size: inherit;
+                }
+                &:hover{
+                    background-color: darken(@red, 10%);
+                }
+                .screen-sm-max({
+                    font-size:0;
+                    .icon-search{
+                        margin-right: 0;
+                        font-size: 1.3rem;
+                    }
+                });
+            }
+        }   
+    }
+    .pagination{
+        float: none;
+    }
+    div.pagination{
+        text-align: center;
+        ul{
+            > li{
+                padding: 4px;
+                background-color: transparent;
+                border: none;
+                a{
+                    float: none;
+                    color: @red;
+                    padding: .5rem .9rem;
+                    font-size: .8rem;
+                    &[title="Start"],
+                    &[title="Prev"],
+                    &[title="Next"],
+                    &[title="End"]{
+                        font-size: 0;
+                        border:none;
+                        padding: .5rem;
+                        &:after{
+                            font-size: .8rem;
+                            font-family: fontawesome;
+                        }
+                        &:hover,
+                        &:focus,
+                        &:active{
+                            background-color: transparent;
+                            color: darken(@red, 10%);
+                        }
+                    }
+                    &[title="Start"]{
+                        &:after{
+                            content: "\f100";
+                        }
+                    }
+                    &[title="Prev"]{
+                        &:after{
+                            content: "\f104";
+                        }
+                    }
+                    &[title="Next"]{
+                        &:after{
+                            content: "\f105";
+                        }
+                    }
+                    &[title="End"]{
+                        &:after{
+                            content: "\f101";
+                        }
+                    }
+                }
+                &.active{
+                    a{
+                        background-color: @red;
+                        border-color: @red;
+                        color: @white;
+                    }
+                }
+                &.disabled{
+                    a{
+                        display: none;
+                    }
+                }
+                .screen-sm-max({
+                    padding: 2px;
+                    a{
+                        padding: .5rem .7rem;
+                    }
+                });
+            }
+        }
+        .screen-sm-max({
+            overflow-x: scroll;
+        });
+    }
+}
+
+.search-results{
+    margin-top: 0;
+    li{
+        transition: all .5s;
+    }
+    .result-text{
+        color: @grey-light;
+    }
+    .result-category{
+        color: @blue;
+    }
+    .result-title{
+        margin-top: 5px;
+        a{
+            color: @red;
+            &:hover{
+                color: darken(@red, 10%);
+            }
+        }
+    }
+} 
