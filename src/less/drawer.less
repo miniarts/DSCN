@@ -16,14 +16,8 @@
 	opacity: 1;
 	line-height: 0;
 	padding-right: 15px;
-	-webkit-transform: 	translateX(0px);
-	-moz-transform: 	translateX(0px);
-	-o-transform: 		translateX(0px);
-	transform: 			translateX(0px);
-	-webkit-transition: 	0.4s opacity ease-out, 0.4s -webkit-transform ease-out;
-    -moz-transition: 		0.4s opacity ease-out, 0.4s -moz-transform ease-out;
-    -o-transition: 			0.4s opacity ease-out, 0.4s -o-transform ease-out;
-    transition: 			0.4s opacity ease-out, 0.4s transform ease-out;
+	transform: translateX(0px);
+    transition: 0.4s opacity ease-out, 0.4s transform ease-out;
 }
 #mob-navbar-btn .btn-wrap {
 	width: 30px;
@@ -54,10 +48,7 @@
 
 .mobnav-closed #mob-navbar-btn .msg-wrap .msg-close {
 	opacity: 0;
-	-webkit-transform: 	translateX(-30px);
-	-moz-transform: 	translateX(-30px);
-	-o-transform: 		translateX(-30px);
-	transform: 			translateX(-30px);
+	transform: translateX(-30px);
 }	
 #mob-navbar-btn .btn-wrap .btn-bar.top {
 	top: -20px;
@@ -80,10 +71,7 @@
 // } 
 .mobnav-open #mob-navbar-btn .msg-wrap .msg-menu {
 	opacity: 0;
-	-webkit-transform: 	translateX(-30px);
-	-moz-transform: 	translateX(-30px);
-	-o-transform: 		translateX(-30px);
-	transform: 			translateX(-30px);
+	transform: translateX(-30px);
 }
 .mobnav-open #mob-navbar-btn .btn-wrap .btn-bar.top {
     top: 0;
@@ -261,43 +249,27 @@
 --------------- */
 .mobnav-closed #mob-navbar {
     visibility: hidden;
-    -webkit-transition:     0s visibility 0.5s;
-    -moz-transition:        0s visibility 0.5s;
-    -o-transition:          0s visibility 0.5s;
-    transition:             0s visibility 0.5s;
+    transition: 0s visibility 0.5s;
 }   
 .mobnav-closed #mob-navbar .navbar-inner {
-    
     opacity: 0;
-    -webkit-transition:     0.5s height ease-in 0.1s, 0.5s opacity ease-out;
-    -moz-transition:        0.5s height ease-in 0.1s, 0.5s opacity ease-out;
-    -o-transition:          0.5s height ease-in 0.1s, 0.5s opacity ease-out;
-    transition:             0.5s height ease-in 0.1s, 0.5s opacity ease-out;
+    transition: 0.5s height ease-in 0.1s, 0.5s opacity ease-out;
 }   
 /* mob nav open
 --------------- */
 .mobnav-open #mob-navbar {
     visibility: visible;
-    -webkit-transition:     0s visibility;
-    -moz-transition:        0s visibility;
-    -o-transition:          0s visibility;
-    transition:             0s visibility;
+    transition: 0s visibility;
 }   
 .mobnav-open #mob-navbar .navbar-inner {
     overflow: hidden;
     opacity: 1;
-    -webkit-transition:     0.5s height ease-out, 0.5s opacity ease-out 0.1s;
-    -moz-transition:        0.5s height ease-out, 0.5s opacity ease-out 0.1s;
-    -o-transition:          0.5s height ease-out, 0.5s opacity ease-out 0.1s;
-    transition:             0.5s height ease-out, 0.5s opacity ease-out 0.1s;
+    transition:  0.5s height ease-out, 0.5s opacity ease-out 0.1s;
 }
 #mob-navbar .navbar-inner .navbar-nav > li {
     top:-40px;
     position: relative;
-    -webkit-transition:     0.4s top ease-out;
-    -moz-transition:        0.4s top ease-out;
-    -o-transition:          0.4s top ease-out;
-    transition:             0.4s top ease-out;
+    transition: 0.4s top ease-out;
 }
 .mobnav-open #mob-navbar .navbar-inner .navbar-nav > li {
     top:0px;

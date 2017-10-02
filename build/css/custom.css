@@ -285,7 +285,6 @@ body .banner .site-btn {
   display: table;
   top: 20px;
   left: 50px;
-  -webkit-transition: 0.5s filter;
   -webkit-transition: 0.5s -webkit-filter;
   transition: 0.5s -webkit-filter;
   transition: 0.5s filter;
@@ -694,7 +693,7 @@ html.banner-flip.view-category .t3-content .blog.banner .page-header {
   line-height: 0;
   padding-right: 15px;
   -webkit-transform: translateX(0px);
-  transform: translateX(0px);
+          transform: translateX(0px);
   -webkit-transition: 0.4s opacity ease-out, 0.4s -webkit-transform ease-out;
   transition: 0.4s opacity ease-out, 0.4s -webkit-transform ease-out;
   transition: 0.4s opacity ease-out, 0.4s transform ease-out;
@@ -731,7 +730,7 @@ html.banner-flip.view-category .t3-content .blog.banner .page-header {
 .mobnav-closed #mob-navbar-btn .msg-wrap .msg-close {
   opacity: 0;
   -webkit-transform: translateX(-30px);
-  transform: translateX(-30px);
+          transform: translateX(-30px);
 }
 #mob-navbar-btn .btn-wrap .btn-bar.top {
   top: -20px;
@@ -752,7 +751,7 @@ html.banner-flip.view-category .t3-content .blog.banner .page-header {
 .mobnav-open #mob-navbar-btn .msg-wrap .msg-menu {
   opacity: 0;
   -webkit-transform: translateX(-30px);
-  transform: translateX(-30px);
+          transform: translateX(-30px);
 }
 .mobnav-open #mob-navbar-btn .btn-wrap .btn-bar.top {
   top: 0;
@@ -2621,15 +2620,12 @@ form.footer-signup input.email-input:focus {
           box-shadow: none;
   border-color: #d0043c;
 }
-form.footer-signup input.email-input::-webkit-input-placeholder,
-form.footer-signup input.email-input::-moz-placeholder,
-form.footer-signup input.email-input::-ms-placeholder,
 form.footer-signup input.email-input::-webkit-input-placeholder {
   color: #999;
 }
-form.footer-signup input.email-input::-webkit-input-placeholder,
-form.footer-signup input.email-input::-moz-placeholder,
-form.footer-signup input.email-input::-ms-placeholder,
+form.footer-signup input.email-input:-ms-input-placeholder {
+  color: #999;
+}
 form.footer-signup input.email-input::placeholder {
   color: #999;
 }
