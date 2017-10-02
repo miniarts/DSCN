@@ -3,6 +3,10 @@
 	- Show:		Design Shanghai	
 	- Css by:   Joe Thom
 	- Version:  1.0.0
+
+	NOTE by Kaori: 
+		differs from bootstrap definition
+		why max-width only?  
 */
 
 
@@ -284,6 +288,16 @@
 
 }	
 
+@media (min-width: 992px) { 
+	.scrolled #t3-content .item-page .page-split.page-header {
+		position: fixed !important; //to override buyerform css for the exhibitor profile 
+		padding-top: 0px;
+		margin-top:50px;
+	}
+	.titleHide .t3-content .item-page .page-split.page-header .header-inner {
+		opacity: 0;
+	}	
+}
 
 /* IPAD PORTAIT
 ============================== */
