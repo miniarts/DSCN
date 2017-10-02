@@ -1,6 +1,6 @@
 /*
     author : kaori
-	
+    
     re-wrote everything but not sure about some logic and left it as it was
     edit this file and compile/minimise it
 */
@@ -17,10 +17,11 @@
                     app.wechatSocial();
                     app.burgerIcon();
                     app.setDrawer();
-                   	
+                    app.backToTop();
+                    
                 });
                 $(window).on('load', function() {
-    				app.onDemandNav();
+                    app.onDemandNav();
                 });
      
                 return false;
@@ -67,16 +68,16 @@
             setDrawer: function(){
                 var $items = $('#mob-navbar .navbar-inner .navbar-nav > li');
                 var height = ($('.navbar-inner').height() - 110)/ $items.length;
-                	//set the line-height, not sure about the -110 but copied from the old one
+                    //set the line-height, not sure about the -110 but copied from the old one
 
                 var setLineHeight = function(){
-    	            $.each($items, function(){
-    	               $(this).css("line-height", height + "px"); 
-    	            });    
-            	};
+                    $.each($items, function(){
+                       $(this).css("line-height", height + "px"); 
+                    });    
+                };
 
                 app.transitionDelay($items, 25);
-               	setLineHeight();
+                setLineHeight();
 
                 $(window).on( "orientationchange", setLineHeight);
 
@@ -89,19 +90,29 @@
                     $("html, body").animate({scrollTop: 0}, 500);
                 });
             },
-    		onDemandNav :function(){    
-    			//NOTE: modified to make it understandable but needs more work 
-    			var paused = false,
-    				lastScrollTop = 0,
-    				onLoaded = true,
-    				$document = $(document),
-    				$body = $('body'),
-    				titleSticky = 0,
-    				contentBottom = 0,
-    				titleHeight = 0 ;
-    			
+            backToTop: function(){
+                var $backToTop = $('#back-to-top'),
+                    $body = $("html, body");
 
-    			var init = function(){
+                $backToTop.on('click', function(e){
+                    e.preventDefault();
+
+                    $body.stop().animate({scrollTop:0}, 500, 'swing');
+                });
+            },
+            onDemandNav :function(){    
+                //NOTE: modified to make it understandable but needs more work 
+                var paused = false,
+                    lastScrollTop = 0,
+                    onLoaded = true,
+                    $document = $(document),
+                    $body = $('body'),
+                    titleSticky = 0,
+                    contentBottom = 0,
+                    titleHeight = 0 ;
+                
+
+                var init = function(){
                         //only article/exhibitor page
                         if (($('html').hasClass('view-article')||$('html').hasClass('view-exhibitor')) && ($('.content-main .page-header').length == 1)) {
                             titleSticky = 1;
@@ -111,51 +122,51 @@
                     },
                     onDemand = function(){ 
     
-    				if ($('.t3-wrapper').hasClass('mobnav-open')) {
+                    if ($('.t3-wrapper').hasClass('mobnav-open')) {
                         //drawer opened - don't do anything
-    		            return false;
-    		        }
+                        return false;
+                    }
 
-    		        var st = $document.scrollTop();     
+                    var st = $document.scrollTop();     
 
-    		        if (onLoaded === true || st <= 100) {
-    		            onLoaded = false;
-    		            $body.removeClass('headerHide');
-    		            $body.removeClass('scrolled');
-    		            $('.content-main .page-header').css({'opacity':'1'});
-    		            return false;
-    		        } else { 
-    		          $body.addClass('scrolled');
-    		        }
+                    if (onLoaded === true || st <= 100) {
+                        onLoaded = false;
+                        $body.removeClass('headerHide');
+                        $body.removeClass('scrolled');
+                        $('.content-main .page-header').css({'opacity':'1'});
+                        return false;
+                    } else { 
+                      $body.addClass('scrolled');
+                    }
 
-    		        if (titleSticky == 1) {
-    		            var tt = $('.content-main .page-header').offset().top + titleHeight;
-    		            if (tt > contentBottom) {
-    		                $('.content-main .page-header').css({'opacity':'0'});
-    		            } else {
-    		                $('.content-main .page-header').css({'opacity':'1'});
-    		            }
-    		        }
+                    if (titleSticky == 1) {
+                        var tt = $('.content-main .page-header').offset().top + titleHeight;
+                        if (tt > contentBottom) {
+                            $('.content-main .page-header').css({'opacity':'0'});
+                        } else {
+                            $('.content-main .page-header').css({'opacity':'1'});
+                        }
+                    }
 
-    		        if( st < lastScrollTop ) {
-    		             if(paused){
-    		                $body.removeClass('headerHide');
-    		                paused = false;
-    		            }       
-    		        } else {
-    		            if( !paused ){
-    		                $body.addClass('headerHide');
-    		                paused = true;
-    		            }
-    		        }           
-    		        lastScrollTop = st;
-    			}
+                    if( st < lastScrollTop ) {
+                         if(paused){
+                            $body.removeClass('headerHide');
+                            paused = false;
+                        }       
+                    } else {
+                        if( !paused ){
+                            $body.addClass('headerHide');
+                            paused = true;
+                        }
+                    }           
+                    lastScrollTop = st;
+                }
 
                 init();
-        	    $(window).on('scroll', function() {
+                $(window).on('scroll', function() {
                     init()
-        	    	onDemand();
-        		});
+                    onDemand();
+                });
                 $(window).on('orientationchange', function() {
                     init();
                 });
