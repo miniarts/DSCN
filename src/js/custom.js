@@ -100,14 +100,16 @@
     				contentBottom = 0,
     				titleHeight = 0 ;
     			
-       			//only article/exhibitor page
-    		    if (($('html').hasClass('view-article')||$('html').hasClass('view-exhibitor')) && ($('.content-main .page-header').length == 1)) {
-    		        titleSticky = 1;
-    		        contentBottom = $('.content-main').height();
-    		        titleHeight = $('.content-main .page-header').outerHeight();
-    		    }
 
-    			var onDemand = function(){ 
+    			var init = function(){
+                        //only article/exhibitor page
+                        if (($('html').hasClass('view-article')||$('html').hasClass('view-exhibitor')) && ($('.content-main .page-header').length == 1)) {
+                            titleSticky = 1;
+                            contentBottom = $('.content-main').height();
+                            titleHeight = $('.content-main .page-header').outerHeight();
+                        }
+                    },
+                    onDemand = function(){ 
     
     				if ($('.t3-wrapper').hasClass('mobnav-open')) {
                         //drawer opened - don't do anything
@@ -149,9 +151,14 @@
     		        lastScrollTop = st;
     			}
 
+                init();
         	    $(window).on('scroll', function() {
+                    init()
         	    	onDemand();
         		});
+                $(window).on('orientationchange', function() {
+                    init();
+                });
             }
         };
   
