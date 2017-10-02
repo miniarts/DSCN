@@ -1251,16 +1251,6 @@ html.banner-flip.view-category .t3-content .blog.banner .page-header {
   max-width: 100%;
   height: auto;
 }
-@media (min-width: 992px) {
-  .scrolled #t3-content .item-page .page-split.page-header {
-    position: fixed !important;
-    padding-top: 0px;
-    margin-top: 50px;
-  }
-  .titleHide .t3-content .item-page .page-split.page-header .header-inner {
-    opacity: 0;
-  }
-}
 #t3-content .item-page.exhib_page .page-header {
   top: 0 !important;
   position: relative !important;
@@ -2218,9 +2208,6 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
   font-size: 1.6em;
   color: rgba(184, 184, 184, 0.6) !important;
   line-height: 1.4em;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-item .mnwall-item-img a {
-  opacity: 0.6;
 }
 .news-list .mnwall_iso_filters_cont {
   width: 100%;
