@@ -113,57 +113,56 @@
     display: inline-block;
     margin-left: 20px;
     width: 30px;
+    a {
+        font-size: 0.8em;
+        background-color: #d4d4d4;
+        padding: 2px;
+        border-radius: 4px;
+        color: @border-color;
+        width: 100%;
+        display: inline-block;  
+        height: 42px;
+        transition: 0.2s background-color ease-out;
+        &:after {
+            content: '';
+            display: block;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+            height: 50%;
+            border-radius: 2px;
+            position: relative;
+            z-index: 1;
+            top:0;
+            transition: 0.2s top ease-out;
+        }
+        span {
+            display: block;
+            padding: 4px;
+            width: 100%;
+            float: left;
+            text-align: center;
+            border-radius: 2px;
+            padding-top: 6px;
+            position: relative;
+            z-index: 2;
+            &.cn {
+                margin-bottom: 2px;
+                font-size: 7px;
+            }
+            &.en {
+                font-weight: 400;
+                color: @border-color;
+            }
+        }
+    }
+    &:hover a {
+        background-color: @red;
+        color: #fff;
+        &:after {
+            top:50%;
+        }
+    }
 }
-.showswitch a {
-    font-size: 0.8em;
-    background-color: #d4d4d4;
-    padding: 2px;
-    border-radius: 4px;
-    color: @border-color;
-    width: 100%;
-    display: inline-block;  
-    height: 42px;
-    transition: 0.2s background-color ease-out;
-}
-.showswitch a:after {
-    content: '';
-    display: block;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    height: 50%;
-    border-radius: 2px;
-    position: relative;
-    z-index: 1;
-    top:0;
-    transition: 0.2s top ease-out;
-}
-.showswitch a span {
-    display: block;
-    padding: 4px;
-    width: 100%;
-    float: left;
-    text-align: center;
-    border-radius: 2px;
-    padding-top: 6px;
-    position: relative;
-    z-index: 2;
-}    
-.showswitch a span.cn {
-    margin-bottom: 2px;
-    
-}
-.showswitch a span.en {
-    font-weight: 400;
-    color: @border-color;
-}
-.showswitch:hover a {
-    background-color: @red;
-    color: #fff;
-}
-.showswitch:hover a:after {
-    top:50%;
-}
-
 
 
 /* SECONDARY NAV
