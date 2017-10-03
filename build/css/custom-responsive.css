@@ -53,7 +53,7 @@
     padding-top: 260px !important;
   }
   body #t3-mainbody .mnwall_container.news-list .mnwall-cover,
-  body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
+  body #t3-mainbody .mnwall_container.news-list .mnwall-cover div {
     height: 285px;
   }
   /* FOOTER
@@ -94,7 +94,7 @@
     padding-top: 220px !important;
   }
   body #t3-mainbody .mnwall_container.news-list .mnwall-cover,
-  body #t3-mainbody .mnwall_container.news-list .mnwall-cover * {
+  body #t3-mainbody .mnwall_container.news-list .mnwall-cover div {
     height: 245px;
   }
   #mnwall_iso_container_3.mnwall_iso_container .mnwall-photo-link {

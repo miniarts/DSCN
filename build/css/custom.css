@@ -1857,6 +1857,12 @@ body #t3-mainbody .mainbody-bottomblocks .block-header.carousel h3 {
   float: left;
   width: 100%;
 }
+.mnwall_container .mnwall-item {
+  top: 0 !important;
+  left: 0 !important;
+  -webkit-transform: none !important;
+          transform: none !important;
+}
 .mnwall_container .mnwall-item-inner-cont,
 .mnwall_container .mnwall-item-inner-cont .mnwall-cover,
 .mnwall_container .mnwall-item-inner-cont .mnwall-img-div {
@@ -1867,6 +1873,7 @@ body #t3-mainbody .mainbody-bottomblocks .block-header.carousel h3 {
 .mnwall_container .mnwall-item-inner {
   padding: 0px !important;
   z-index: 2;
+  height: 100%;
 }
 .mnwall_container .mnwall-item-inner .mnwall-item-coverlink {
   position: absolute;
@@ -1874,16 +1881,6 @@ body #t3-mainbody .mainbody-bottomblocks .block-header.carousel h3 {
   left: 0;
   right: 0;
   bottom: 0;
-}
-#mnwall_iso_container_1 a.mnwall-photo-link {
-  height: 100% !important;
-}
-body #t3-mainbody .mnwall_iso_container .mnwall-item {
-  float: left !important;
-  display: inline-block;
-  padding: 0px !important;
-  cursor: pointer;
-  height: auto !important;
 }
 .mnwall_iso_container {
   margin: 0px !important;
@@ -1900,6 +1897,7 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
   z-index: 1;
   display: block;
   width: 100%;
+  height: 100%;
   opacity: 0.9;
   -webkit-transition: 0.5s opacity, 8s -webkit-transform;
   transition: 0.5s opacity, 8s -webkit-transform;
@@ -1939,7 +1937,7 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
   height: 3px;
   width: 18px;
 }
-.mnwall_iso_container .mnwall-item:hover {
+.mnwall_iso_container .mnwall-item:hover .mnwall-item-img a {
   opacity: 0.4;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -1948,6 +1946,9 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
   -webkit-transform: translate(-19px, -19px);
           transform: translate(-19px, -19px);
   opacity: 0.9;
+}
+.mnwall_iso_container#mnwall_iso_container_26 .mnwall-photo-link {
+  height: 100% !important;
 }
 .mnwall-columns .content-bottom .mnwall-item-inner {
   position: absolute;
@@ -1958,11 +1959,22 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
 .mnwall_iso_buttons a {
   font-size: 1.4em;
 }
-.mnwall_iso_container#mnwall_iso_container_26 .mnwall-photo-link {
+#mnwall_iso_container_1 a.mnwall-photo-link {
   height: 100% !important;
+}
+body #t3-mainbody .mnwall_iso_container .mnwall-item {
+  float: left !important;
+  display: inline-block;
+  padding: 0px !important;
+  cursor: pointer;
+  height: auto !important;
 }
 /* home sections
 --------------- */
+body #t3-mainbody .mnwall_container {
+  /* subpage list
+--------------- */
+}
 body #t3-mainbody .mnwall_container.home-sections .mnwall-item {
   width: 50% !important;
   padding-top: 250px !important;
@@ -2000,7 +2012,7 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
   margin-right: 50px;
   height: auto;
 }
-.mnwall_container.home-sections .pano_link {
+body #t3-mainbody .mnwall_container.home-sections .pano_link {
   position: absolute;
   left: 55px;
   bottom: 20px;
@@ -2008,6 +2020,111 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
   color: #fff;
   font-size: 1.8em;
   font-weight: 100;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item,
+body #t3-mainbody .mnwall_container.news-list .mnwall-item {
+  width: 33.333333% !important;
+  position: relative !important;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item {
+  padding-top: 360px !important;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item .mnwall-item-outer-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body #t3-mainbody .mnwall_container.home-sections .mnwall-cover,
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-cover {
+  height: 100%;
+}
+body #t3-mainbody .mnwall_container.home-sections .mnwall-cover div,
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-cover div {
+  height: 100%;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner {
+  display: table !important;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-title {
+  display: table-cell !important;
+  vertical-align: middle;
+  padding: 0px 50px;
+  line-height: 150%;
+  text-shadow: 1px 1px 1px black;
+}
+body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-title a {
+  text-transform: capitalize !important;
+  font-size: 3em !important;
+  line-height: 1em !important;
+  color: #fff !important;
+  font-weight: 300;
+  display: inline-block;
+  height: auto;
+}
+/* News list */
+#t3-mainbody .mnwall_container.news-list .mnwall-cover,
+#t3-mainbody .mnwall_container.news-list .mnwall-cover div {
+  height: 325px;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall_iso_container .mnwall-item .mnwall-item-inner {
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: 0.5s background-color;
+  transition: 0.5s background-color;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall_iso_container .mnwall-item:hover .mnwall-item-inner {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title {
+  padding: 19px 19px 10px;
+  position: relative;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title a {
+  text-transform: capitalize !important;
+  font-size: 2em;
+  color: #fff !important;
+  font-weight: 300;
+  display: block;
+  overflow: hidden;
+  padding-right: 100px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 24px;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title .mnwall-date {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+  color: #b7b7b7;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  padding: 10px 15px 0;
+  line-height: 24px;
+}
+#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-desc {
+  padding: 0px 19px 50px;
+  font-size: 1.6em;
+  color: rgba(184, 184, 184, 0.6) !important;
+  line-height: 1.4em;
+}
+.news-list .mnwall_iso_filters_cont {
+  width: 100%;
+  padding: 0 4%;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.news-list .mnwall_iso_filters_cont:after {
+  font-family: fontawesome;
+  content: "\f0ec";
+  font-size: 1rem;
+  position: absolute;
+  right: 2%;
+  bottom: 35px;
+  z-index: 2;
+  color: #777;
 }
 /* VIDEO LIST
 -------------------- */
@@ -2096,118 +2213,6 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
 .mnwall_container.speakers-list .mnwall-photo-link {
   background-position: center center;
   background-size: cover;
-}
-#t3-mainbody .mnwall_container .mnwall-item {
-  top: 0 !important;
-  left: 0 !important;
-  -webkit-transform: none !important;
-          transform: none !important;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-cover,
-#t3-mainbody .mnwall_container.news-list .mnwall-cover * {
-  height: 325px;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall_iso_container .mnwall-item .mnwall-item-inner {
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: 0.5s background-color;
-  transition: 0.5s background-color;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall_iso_container .mnwall-item:hover .mnwall-item-inner {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title {
-  padding: 19px 19px 10px;
-  position: relative;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title a {
-  text-transform: capitalize !important;
-  font-size: 2em;
-  color: #fff !important;
-  font-weight: 300;
-  display: block;
-  overflow: hidden;
-  padding-right: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  line-height: 24px;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-title .mnwall-date {
-  position: absolute;
-  right: 0px;
-  top: 10px;
-  color: #b7b7b7;
-  font-size: 1.6em;
-  text-transform: uppercase;
-  padding: 10px 15px 0;
-  line-height: 24px;
-}
-#t3-mainbody .mnwall_container.news-list .mnwall-item-inner .mnwall-desc {
-  padding: 0px 19px 50px;
-  font-size: 1.6em;
-  color: rgba(184, 184, 184, 0.6) !important;
-  line-height: 1.4em;
-}
-.news-list .mnwall_iso_filters_cont {
-  width: 100%;
-  padding: 0 4%;
-  margin: 0;
-  display: inline-block;
-  position: relative;
-  overflow: hidden;
-}
-.news-list .mnwall_iso_filters_cont:after {
-  font-family: fontawesome;
-  content: "\f0ec";
-  font-size: 1rem;
-  position: absolute;
-  right: 2%;
-  bottom: 35px;
-  z-index: 2;
-  color: #777;
-}
-/* subpage list
---------------- */
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item,
-body #t3-mainbody .mnwall_container.news-list .mnwall-item {
-  width: 33.333333% !important;
-  position: relative !important;
-}
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item {
-  padding-top: 360px !important;
-}
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item .mnwall-item-outer-cont {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-body #t3-mainbody .mnwall_container.home-sections .mnwall-cover,
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-cover {
-  height: 100%;
-}
-body #t3-mainbody .mnwall_container.home-sections .mnwall-cover *,
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-cover * {
-  height: 100%;
-}
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner {
-  display: table !important;
-}
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-title {
-  display: table-cell !important;
-  vertical-align: middle;
-  padding: 0px 50px;
-  line-height: 150%;
-  text-shadow: 1px 1px 1px black;
-}
-body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-title a {
-  text-transform: capitalize !important;
-  font-size: 3em !important;
-  line-height: 1em !important;
-  color: #fff !important;
-  font-weight: 300;
-  display: inline-block;
-  height: auto;
 }
 /* halls subpage list
 --------------- */
