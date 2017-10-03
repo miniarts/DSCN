@@ -171,6 +171,12 @@ body .banner .site-btn {
 .t3-header .main-navbar .t3-megamenu {
   display: inline-block;
 }
+.t3-header .main-navbar .t3-megamenu .mega-nav > li a {
+  color: #141414;
+}
+.t3-header .main-navbar .t3-megamenu .mega-nav > li a:hover {
+  color: #d0043c;
+}
 .t3-header .main-navbar .navbar-nav > li > a {
   padding: 10px 18px;
   color: #141414;
@@ -178,10 +184,19 @@ body .banner .site-btn {
   transition: 0.5s color;
   font-size: 1.8em;
 }
+.t3-header .main-navbar .navbar-nav > li > a .caret {
+  border-top-color: #141414;
+  border-bottom-color: #141414;
+}
 .t3-header .main-navbar .navbar-nav > li > a:hover,
 .t3-header .main-navbar .navbar-nav > li > a:focus {
   color: #d0043c;
   background-color: transparent;
+}
+.t3-header .main-navbar .navbar-nav > li > a:hover .caret,
+.t3-header .main-navbar .navbar-nav > li > a:focus .caret {
+  border-top-color: #d0043c;
+  border-bottom-color: #d0043c;
 }
 .t3-header .main-navbar .navbar-nav > li > a.home-icon {
   text-indent: -999px;
@@ -205,6 +220,10 @@ body .banner .site-btn {
 }
 .t3-header .main-navbar .navbar-nav > li:not(:last-of-type).active a:not(.home-icon) {
   color: #d0043c;
+}
+.t3-header .main-navbar .navbar-nav > li:not(:last-of-type).active a:not(.home-icon) .caret {
+  border-top-color: #d0043c;
+  border-bottom-color: #d0043c;
 }
 .t3-header .main-navbar .navbar-nav > li:last-of-type {
   margin-left: 15px;

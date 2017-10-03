@@ -6,6 +6,12 @@
     right: 39px;
     .t3-megamenu {
         display: inline-block;
+        .mega-nav > li a{
+            color: @background-dark;
+            &:hover{
+                color: @red;
+            }
+        }
     }
     .navbar-nav > li{
         > a{
@@ -13,10 +19,18 @@
             color: @background-dark;
             transition: 0.5s color;
             font-size: 1.8em;
+            .caret{
+                border-top-color: @background-dark;
+                border-bottom-color: @background-dark;
+            }
             &:hover,
             &:focus{
                 color:@red;
                 background-color: transparent;
+                .caret{
+                    border-top-color: @red;
+                    border-bottom-color: @red;
+                }
             }
             &.home-icon {
                 text-indent: -999px;
@@ -42,6 +56,10 @@
         }
         &:not(:last-of-type).active a:not(.home-icon) {
             color:@red;
+            .caret{
+                border-top-color: @red;
+                border-bottom-color: @red;
+            }
         }
         &:last-of-type{
             margin-left: 15px;
