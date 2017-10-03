@@ -1857,9 +1857,23 @@ body #t3-mainbody .mainbody-bottomblocks .block-header.carousel h3 {
   float: left;
   width: 100%;
 }
-.mnwall_iso_container {
-  margin: 0px !important;
-  height: auto !important;
+.mnwall_container .mnwall-item-inner-cont,
+.mnwall_container .mnwall-item-inner-cont .mnwall-cover,
+.mnwall_container .mnwall-item-inner-cont .mnwall-img-div {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.mnwall_container .mnwall-item-inner {
+  padding: 0px !important;
+  z-index: 2;
+}
+.mnwall_container .mnwall-item-inner .mnwall-item-coverlink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 #mnwall_iso_container_1 a.mnwall-photo-link {
   height: 100% !important;
@@ -1871,43 +1885,21 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
   cursor: pointer;
   height: auto !important;
 }
-.mnwall_container .mnwall-item-inner {
-  padding: 0px !important;
-  z-index: 2;
-}
-.mnwall_container .mnwall-item-inner-cont,
-.mnwall_container .mnwall-item-inner-cont .mnwall-cover,
-.mnwall_container .mnwall-item-inner-cont .mnwall-img-div {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+.mnwall_iso_container {
+  margin: 0px !important;
+  height: auto !important;
 }
 .mnwall_iso_container .mnwall-item h3.mnwall-title {
   font-size: 1em !important;
-}
-.mnwall_iso_container .mnwall-item .mnwall-item-img a {
-  z-index: 1;
-  display: block;
-  width: 100%;
-}
-.mnwall-columns .content-bottom .mnwall-item-inner {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  max-height: 100%;
-}
-.mnwall_container .mnwall-item-inner .mnwall-item-coverlink {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .mnwall_iso_container .mnwall-item .mnwall-item-img {
   background-color: #000;
   margin: 0% -1%;
 }
 .mnwall_iso_container .mnwall-item .mnwall-item-img a {
+  z-index: 1;
+  display: block;
+  width: 100%;
   opacity: 0.9;
   -webkit-transition: 0.5s opacity, 8s -webkit-transform;
   transition: 0.5s opacity, 8s -webkit-transform;
@@ -1917,15 +1909,10 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item {
   background-repeat: no-repeat;
   background-position: center;
 }
-.mnwall_iso_container .mnwall-item:hover .mnwall-item-img a {
-  opacity: 0.4;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
 .mnwall_iso_container .mnwall-item .mnwall-item-img a img {
   height: auto;
 }
-body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon {
+.mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon {
   color: #fff;
   position: absolute;
   height: 18px;
@@ -1939,26 +1926,40 @@ body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-ic
   transition: 0.3s opacity, 0.3s transform;
   transition: 0.3s opacity, 0.3s transform, 0.3s -webkit-transform;
 }
-body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit {
+.mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit {
   background-color: #fff;
   display: inline-block;
   float: right;
 }
-body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit.corner-top {
+.mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit.corner-top {
   width: 3px;
   height: 15px;
 }
-body #t3-mainbody .mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit.corner-bottom {
+.mnwall_iso_container .mnwall-item .mnwall-item-img .corner-icon .corner-bit.corner-bottom {
   height: 3px;
   width: 18px;
 }
-body #t3-mainbody .mnwall_iso_container .mnwall-item:hover .mnwall-item-img .corner-icon {
+.mnwall_iso_container .mnwall-item:hover {
+  opacity: 0.4;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.mnwall_iso_container .mnwall-item:hover .mnwall-item-img .corner-icon {
   -webkit-transform: translate(-19px, -19px);
           transform: translate(-19px, -19px);
   opacity: 0.9;
 }
+.mnwall-columns .content-bottom .mnwall-item-inner {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-height: 100%;
+}
 .mnwall_iso_buttons a {
   font-size: 1.4em;
+}
+.mnwall_iso_container#mnwall_iso_container_26 .mnwall-photo-link {
+  height: 100% !important;
 }
 /* home sections
 --------------- */
@@ -2023,7 +2024,7 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
   position: static !important;
   padding: 19px;
 }
-.ug-tile .ug-textpanel {
+.ug-tile .ug-textpanel-title .ug-textpanel {
   height: auto !important;
 }
 /* PRESS COVERAGE LIST
@@ -2069,70 +2070,8 @@ body #t3-mainbody .mnwall_container.home-sections .mnwall-item-inner .mnwall-tit
 .mainbody-bottomblocks .bannergroup {
   padding: 19px 50px;
 }
-/* SCHEDULE
+/* SCHEDULE -- where is this??
 -------------------- */
-.rl_tabs-responsive,
-.rl_tabs,
-.rl_tabs > ul.nav-tabs > li {
-  margin-bottom: 0px !important;
-  background-color: #fff;
-}
-.mainbody-bottomblocks .block-inner > .schedule-list {
-  /* 	padding-right:50px; */
-  padding-top: 0px;
-}
-.schedule-list .nav-tabs {
-  background-color: #fff;
-  padding: 0px 50px;
-  border: none !important;
-}
-.schedule-list .nav-tabs li {
-  text-align: left;
-}
-.schedule-list .nav-tabs li a {
-  display: inline-block;
-  padding: 25px 19px;
-  margin: 0px;
-  border: none !important;
-  height: auto;
-  font-size: 1.6em;
-  line-height: 150%;
-  text-decoration: none;
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
-}
-.schedule-list .nav-tabs li:first-of-type a {
-  padding-left: 0px;
-}
-.schedule-list .nav-tabs li a span {
-  color: #000;
-}
-.schedule-list .nav-tabs li.active a span {
-  color: #d0043c;
-}
-.schedule-list .tab-content {
-  border: none !important;
-}
-.schedule-list .tab-content .tab-pane {
-  padding: 0px !important;
-  border-top: 1px solid #e4e4e4;
-}
-.schedule-list .tab-content .jux-tl-item {
-  border-bottom: 1px solid #e4e4e4;
-  padding: 19px 50px;
-  background-color: #fff;
-}
-.schedule-list .tab-content .jux-tl-item .jux-tl-time {
-  margin-bottom: 5px;
-}
-.schedule-list .tab-content .jux-tl-item .jux-tl-title {
-  color: #000;
-}
-.schedule-list .tab-content .jux-tl-item .jux-tl-desc strong {
-  color: #d0043c;
-  margin-top: 19px;
-  display: inline-block;
-}
 /* exhibitor list
 --------------- */
 .exhibitor-list {
