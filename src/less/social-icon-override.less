@@ -1,130 +1,152 @@
 
 /* ---------- *//* ---------- SOCIAL ICON OVERRIDE ---------- *//* ---------- */
-body [class*="foundicon-"]:before, .a2a_kit a .a2a_svg:before {
+#socialicons [class*="foundicon-"]:before,
+.a2a_kit a .a2a_svg:before {
   font-family: "FontAwesome";
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
 }
 
+.a2a_kit a {
+  padding:19px !important;
+  text-align: center;
+  color: @text-color;
+  font-size: 1.8em;
+    .a2a_svg {
+        width: auto !important;
+        height: auto !important;
+        background: none !important;
+        svg {
+            display: none;
+        }
+    }
+}
+
 /* icons */
-body .a2a_s_email:before {
-	content: "\f0e0";
+.a2a_s_email:before {
+  content: "\f0e0";
 }
-body .a2a_s_sina_weibo:before {
-	content: "\f18a";
+.a2a_s_sina_weibo:before {
+  content: "\f18a";
 }
-body .a2a_s_wechat:before {
-	content: "\f1d7";
-}
-body .foundicon-rss:before {
-  content: "\f002";
-}
-
-body .foundicon-facebook:before, .a2a_s_facebook:before {
-  content: "\f09a";
-}
-
-body .foundicon-twitter:before, .a2a_s_twitter:before {
-  content: "\f099";
-}
-
-body .foundicon-pinterest:before, .a2a_s_pinterest:before {
-  content: "\f0d2";
-}
-
-body .foundicon-github:before {
-  content: "\f006";
-}
-
-body .foundicon-path:before {
-  content: "\f007";
-}
-
-body .foundicon-linkedin:before, .a2a_s_linkedin:before {
-  content: "\f0e1";
-}
-
-body .foundicon-dribbble:before {
-  content: "\f009";
-}
-
-body .foundicon-stumble-upon:before {
-  content: "\f00a";
-}
-
-body .foundicon-behance:before {
-  content: "\f00b";
-}
-
-body .foundicon-reddit:before {
-  content: "\f00c";
-}
-
-body .foundicon-google-plus:before, .a2a_s_google_plus:before {
-  content: "\f0d5";
-}
-
-body .foundicon-youtube:before {
-  content: "\f16a";
-}
-
-body .foundicon-vimeo:before {
-  content: "\f00f";
-}
-
-body .foundicon-flickr:before {
-  content: "\f010";
-}
-
-body .foundicon-slideshare:before {
-  content: "\f011";
-}
-
-body .foundicon-picassa:before {
-  content: "\f012";
-}
-
-body .foundicon-skype:before {
-  content: "\f013";
-}
-
-body .foundicon-steam:before {
-  content: "\f014";
-}
-
-body .foundicon-instagram:before {
-  content: "\f16d";
-}
-
-body .foundicon-foursquare:before {
-  content: "\f016";
-}
-
-body .foundicon-delicious:before {
-  content: "\f017";
-}
-
-body .foundicon-chat:before {
-  content: "\f018";
-}
-
-body .foundicon-torso:before {
+.a2a_s_wechat:before {
   content: "\f1d7";
 }
 
-body .foundicon-tumblr:before {
+#socialicons .foundicon-rss:before {
+  content: "\f002";
+}
+
+#socialicons .foundicon-facebook:before,
+.a2a_s_facebook:before {
+  content: "\f09a";
+}
+
+#socialicons .foundicon-twitter:before,
+.a2a_s_twitter:before {
+  content: "\f099";
+}
+
+#socialicons .foundicon-pinterest:before
+.a2a_s_pinterest:before{
+  content: "\f0d2";
+}
+
+#socialicons .foundicon-github:before {
+  content: "\f006";
+}
+
+#socialicons .foundicon-path:before {
+  content: "\f007";
+}
+
+#socialicons .foundicon-linkedin:before,
+.a2a_s_linkedin:before {
+  content: "\f0e1";
+}
+
+#socialicons .foundicon-dribbble:before {
+  content: "\f009";
+}
+
+#socialicons .foundicon-stumble-upon:before {
+  content: "\f00a";
+}
+
+#socialicons .foundicon-behance:before {
+  content: "\f00b";
+}
+
+#socialicons .foundicon-reddit:before {
+  content: "\f00c";
+}
+
+#socialicons .foundicon-google-plus:before,
+.a2a_s_google_plus:before {
+  content: "\f0d5";
+}
+
+#socialicons .foundicon-youtube:before {
+  content: "\f16a";
+}
+
+#socialicons .foundicon-vimeo:before {
+  content: "\f00f";
+}
+
+#socialicons .foundicon-flickr:before {
+  content: "\f010";
+}
+
+#socialicons .foundicon-slideshare:before {
+  content: "\f011";
+}
+
+#socialicons .foundicon-picassa:before {
+  content: "\f012";
+}
+
+#socialicons .foundicon-skype:before {
+  content: "\f013";
+}
+
+#socialicons .foundicon-steam:before {
+  content: "\f014";
+}
+
+#socialicons .foundicon-instagram:before {
+  content: "\f16d";
+}
+
+#socialicons .foundicon-foursquare:before {
+  content: "\f016";
+}
+
+#socialicons .foundicon-delicious:before {
+  content: "\f017";
+}
+
+#socialicons .foundicon-chat:before {
+  content: "\f018";
+}
+
+#socialicons .foundicon-torso:before {
+  content: "\f1d7";
+}
+
+#socialicons .foundicon-tumblr:before {
   content: "\f18a";
 }
 
-body .foundicon-video-chat:before {
+#socialicons .foundicon-video-chat:before {
   content: "\f01b";
 }
 
-body .foundicon-digg:before {
+#socialicons .foundicon-digg:before {
   content: "\f01c";
 }
 
-body .foundicon-wordpress:before {
+#socialicons .foundicon-wordpress:before {
   content: "\f01d";
 }

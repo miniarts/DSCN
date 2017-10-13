@@ -1,19 +1,21 @@
 /* BUTTONS 
 -------------------- */
 body .site-btn {
-    padding: 15px 26px;
-    color: #fff;
+    padding: 10px 26px;
+    color: @btn-primary-color;
     border-radius: 4px;
-    background-color: @red;
+    background-color: @btn-primary-bg;
     font-weight: 300;
     text-transform: capitalize;
     display: inline-block;
     transition: 0.3s background-color;
-}	
-body .site-btn:hover, body .site-btn:focus {
-	text-decoration: none;
-	background-color: #1f1f1f !important;
+    &:hover, 
+    &:focus {
+        text-decoration: none;
+        background-color: @gray-darkest !important;
+        color: @btn-primary-color;
+    }
 }
 body .banner .site-btn {
-	font-size: 1.4em;
+    font-size: 1.2em;
 }

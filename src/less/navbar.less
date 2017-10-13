@@ -7,21 +7,25 @@
     .t3-megamenu {
         display: inline-block;
         .mega-nav > li a{
-            color: @background-dark;
+            color: @gray-darkest;
+            // padding: .5rem 1rem;
+            // line-height: 1.4;
+            // white-space: nowrap;
             &:hover{
                 color: @red;
+                // background-color: transparent;
             }
         }
     }
     .navbar-nav > li{
         > a{
             padding: 10px 18px;
-            color: @background-dark;
+            color: @gray-darkest;
             transition: 0.5s color;
             font-size: 1.8em;
             .caret{
-                border-top-color: @background-dark;
-                border-bottom-color: @background-dark;
+                border-top-color: @gray-darkest;
+                border-bottom-color: @gray-darkest;
             }
             &:hover,
             &:focus{
@@ -54,8 +58,16 @@
                 font-size: 0;
             }
         }
-        &:not(:last-of-type).active a:not(.home-icon) {
+        &.open a{
+            background-color: transparent !important;
+            &:focus,
+            &:hover{
+                color: @red;
+            }
+        }
+        &:not(:last-of-type).active > a:not(.home-icon) {
             color:@red;
+            background-color: transparent;
             .caret{
                 border-top-color: @red;
                 border-bottom-color: @red;
@@ -66,11 +78,11 @@
             a{ 
                 font-weight: 300;
                 transition: 0.5s background-color;
-                color: #fff;
-                background-color: @red;
+                color: @btn-primary-color;
+                background-color: @btn-primary-bg;
                 border-radius: 4px;
                 &:hover {
-                    background-color: @background-dark;
+                    background-color: @gray-darkest;
                 }
             }
         }

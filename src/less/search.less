@@ -42,13 +42,13 @@
                 &:hover{
                     background-color: darken(@red, 10%);
                 }
-                .screen-sm-max({
+                @media screen and (max-width: @screen-xs-max) {
                     font-size:0;
                     .icon-search{
                         margin-right: 0;
                         font-size: 1.3rem;
                     }
-                });
+                }
             }
         }   
     }
@@ -118,17 +118,17 @@
                         display: none;
                     }
                 }
-                .screen-sm-max({
+                @media screen and (max-width: @screen-xs-max) {
                     padding: 2px;
                     a{
                         padding: .5rem .7rem;
                     }
-                });
+                }
             }
         }
-        .screen-sm-max({
+        @media screen and (max-width: @screen-xs-max) {
             overflow-x: scroll;
-        });
+        }
     }
 }
 
@@ -138,7 +138,7 @@
         transition: all .5s;
     }
     .result-text{
-        color: @grey-light;
+        color: @gray-light;
     }
     .result-category{
         color: @blue;

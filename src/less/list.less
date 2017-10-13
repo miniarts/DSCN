@@ -52,22 +52,18 @@
     }
 }
 
-.mnwall_iso_container{
+#t3-mainbody .mnwall_iso_container{
     margin:0px !important;
     height: auto !important;
     .mnwall-item{
-        h3.mnwall-title {
-            font-size: 1em !important;   
-        }
         .mnwall-item-img{
-            background-color: @black;
             margin: 0% -1%;
+            background-color: #000;
             a {
-                z-index: 1;
                 display: block;
-                width: 100%;    
-                height: 100%;
                 opacity: 0.9;
+                height: 100% !important; //override for some crazy css
+                width: 100% !important; //override for some crazy css
                 transition: 0.5s opacity, 8s transform;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -172,7 +168,7 @@ body #t3-mainbody .mnwall_container{
                 padding:0;
                 a {
                     text-transform: capitalize !important;
-                    font-size: 3em;
+                    font-size: 1em;
                     color: #fff !important;
                     font-weight: 300;
                     display: inline-block;
@@ -231,6 +227,7 @@ body #t3-mainbody .mnwall_container{
             padding:0px 50px;
             line-height: 150%;
             text-shadow: 1px 1px 1px black;
+            font-size: 1em;
             a {
                 text-transform: capitalize !important;
                 font-size: 3em !important;
@@ -268,8 +265,8 @@ body #t3-mainbody .mnwall_container{
                 position: relative;
                 a {
                     text-transform: capitalize !important;
-                    font-size: 2em;
-                    color: #fff !important;
+                    // font-size: 2em;
+                    color: #fff;
                     font-weight: 300;
                     display: block;
                     overflow: hidden;
@@ -283,7 +280,7 @@ body #t3-mainbody .mnwall_container{
                     right: 0px;
                     top: 10px;
                     color: #b7b7b7;
-                    font-size: 1.6em;
+                    // font-size: 1.6em;
                     text-transform: uppercase;
                     padding: 10px 15px 0;
                     line-height: 24px;
@@ -292,13 +289,29 @@ body #t3-mainbody .mnwall_container{
             .mnwall-desc {
                 padding: 0px 19px 50px;
                 font-size: 1.6em;
-                color: rgba(184, 184, 184, 0.6) !important;
+                color: rgba(184, 184, 184, 0.6);
                 line-height: 1.4em;
+                max-height: 160px;
             }    
         }
-        // .mnwall-item .mnwall-item-img a {
-        //     opacity: 0.6;
-        // }
+        div[class*="cat-"]{
+            .mnwall-desc{
+                color: @gray-light;
+            }
+            .mnwall-title{
+                a{
+                    color: @gray;
+                }
+            }
+            .mnwall-item-outer-cont{
+                background-color:  @gray-lightest;
+                &:hover{
+                    .mnwall-item-inner{
+                        background-color: rgba(255, 255, 255, 0.6) !important;
+                    }
+                }
+            }
+        }
     }
 }
 .news-list{
@@ -315,7 +328,7 @@ body #t3-mainbody .mnwall_container{
             font-size: 1rem;
             position: absolute;
             right: 2%;
-            bottom: 35px;
+            bottom: 27px;
             z-index: 2;
             color: @border-color;
         }
@@ -364,8 +377,20 @@ body #t3-mainbody .mnwall_container{
     .banneritem{
         display: inline-block;
         position: relative;
-        width: 110px;
+        width: calc(100%/8);
         padding-top: 7.142%;
+        @media (max-width: @screen-sm-max) {    
+            width: calc(100%/6);
+            padding-top: calc(100%/6);
+        }
+        @media (max-width: @screen-xs-max) {    
+            width: calc(100%/4);
+            padding-top: calc(100%/4);
+        }
+        @media (max-width: @screen-xxs-max) {  
+            width: calc(100%/3);
+            padding-top: calc(100%/3);
+        }
         .bannerimg {
         	height: 100%;
             display: block;
@@ -385,69 +410,6 @@ body #t3-mainbody .mnwall_container{
 .mainbody-bottomblocks .bannergroup {
     padding: 19px 50px;	
 }
-
-
-/* SCHEDULE -- where is this??
--------------------- */
-// .rl_tabs-responsive, .rl_tabs, .rl_tabs>ul.nav-tabs>li {
-// 	margin-bottom: 0px !important;
-//     background-color: #fff;
-// }
-// .mainbody-bottomblocks .block-inner > .schedule-list {
-// /* 	padding-right:50px; */
-// 	padding-top:0px;
-// }
-// .schedule-list .nav-tabs {
-// 	background-color: #fff;
-//  	padding:0px 50px; 
-// 	border:none !important;
-// }
-// .schedule-list .nav-tabs li {
-//     text-align: left;
-// }
-// .schedule-list .nav-tabs li a {
-//     display: inline-block;
-//     padding: 25px 19px;
-//     margin: 0px;
-//     border: none !important;
-//     height: auto;
-//     font-size: 1.6em;
-//     line-height: 150%;
-//     text-decoration: none;
-//     box-shadow: none !important;
-// }
-// .schedule-list .nav-tabs li:first-of-type a {
-// 	padding-left: 0px;
-// }
-// .schedule-list .nav-tabs li a span {
-//     color: #000;
-// }
-// .schedule-list .nav-tabs li.active a span {
-//     color: @red;
-// }
-// .schedule-list .tab-content {
-// 	border: none !important;
-// }
-// .schedule-list .tab-content .tab-pane {
-// 	padding:0px !important;
-// 	border-top: 1px solid #e4e4e4;
-// }
-// .schedule-list .tab-content .jux-tl-item { 
-//     border-bottom: 1px solid #e4e4e4;
-//     padding: 19px 50px;
-//     background-color: #fff;
-// }
-// .schedule-list .tab-content .jux-tl-item .jux-tl-time {
-// 	margin-bottom: 5px;
-// }
-// .schedule-list .tab-content .jux-tl-item .jux-tl-title {
-// 	color: #000;
-// }
-// .schedule-list .tab-content .jux-tl-item .jux-tl-desc strong {
-//     color: @red;	
-//     margin-top: 19px;
-//     display: inline-block;
-// }
 
 
 
@@ -472,23 +434,51 @@ body #t3-mainbody .mnwall_container{
     }
 }
 
+body #t3-mainbody .ExhibitorsOutput{
+    .mnwall-item{
+        .mnwall-item-inner{
+            background: rgba(0, 0, 0, 0.5) !important;
+            max-height: 30%;
+            transition: all .3s;
+            width: 101%; //to avoid the gap
+            .mnwall-item-category{
+                text-transform: uppercase;
+                font-size: .9rem;
+                text-shadow: 1px 1px 0px @black;
+                line-height: 1.4;
+                strong{
+                    text-transform: lowercase;
+                }
+            }
+        }
+        &:hover{
+            .mnwall-item-inner{
+                background: rgba(0, 0, 0, 0) !important;
+                max-height: 100%;
+            }
+        }
+    }
+}
+
 /* hide link through
 --------------- */
-.mnwall_container.speakers-list .mnwall-photo-link {
-    background-position: center center;
-    background-size: cover;
-}
+// .mnwall_container.speakers-list .mnwall-photo-link {
+//     background-position: center center;
+//     background-size: cover;
+// }
 
 
 /* halls subpage list
 --------------- */
-.itemid-130 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(1), .itemid-130 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(2) {
+.itemid-130 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(1), 
+.itemid-130 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(2) {
     width: 50% !important;
 }
 
 /* press subpage list
 --------------- */
-.itemid-195 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(4), .itemid-195 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(5) {
+.itemid-195 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(4), 
+.itemid-195 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item:nth-child(5) {
     width: 50% !important;
 }
 .itemid-195 body #t3-mainbody  .mnwall_container.subpage-list .mnwall-item .mnwall-item-img a {

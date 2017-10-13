@@ -3,13 +3,7 @@
 ============================== */
 footer {
 	border: none !important;
-	background-color: @background-dark !important;
-	z-index: 2;
     position: relative;	
-    &#t3-footer{
-        color: @footer-text-color;
-    }
-
 
 /* FOOTER LEADERBOARD 
 -------------------- */
@@ -57,80 +51,6 @@ footer {
         }
     }
 }
-/* FOOTER SOCIAL 
--------------------- */
-footer .footer-social {
-	background-color: #000;
-	position: relative;
-	float: left;
-	width: 100%;
-}
-footer .footer-social .footer-social-wrap {
-    display: table;
-    position: relative;
-    width: 100%;
-}
-footer .footer-social .footer-social-wrap ul {
-    background-color: #1b1b1b;
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    padding: 0px;
-    margin: 0px;	
-}
-footer .footer-social .footer-social-wrap ul li {
-    float: none !important;
-    margin:0px !important;
-    text-align: center !important;
-    display: table-cell;
-    width: auto;
-    vertical-align: middle;
-}	
-footer .footer-social .footer-social-wrap ul li a {
-	// width: 100%;
-    height: 100%;
-    display: inline-block;
-    text-decoration: none !important;
-    padding: 25px 40%;
-    position: relative;
-}
-footer .footer-social .footer-social-wrap ul li a span {
-	font-size: 1.8em !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(odd) {
-	background-color:@background-dark;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(2) span {
-	color: #3b5998 !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(1) span {
-	color: #00aced !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(6) span {
-	color: #51c332 !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(5) span {
-	color: #e6162d !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(3) span {
-	color: #0077b5 !important;
-}
-footer .footer-social .footer-social-wrap ul li:nth-child(4) span {
-	color: #bf4030 !important;
-}
-
-/* wechat qr code popup
--------------------- */
-.wechatQR {
-	position: absolute;
-    transform: translate(-100%, -55%);
-}
-.block-header .wechatQR {
-    transform: translate(-100%, -50%);
-}
-.mob-social .wechatQR {
-    transform: translate(-65%, -85%);
-}
 
 
 /* FOOTER BANNERS
@@ -140,7 +60,7 @@ footer > .footer-banners {
     width: 100%;
     background-color: @footer-background;	
     padding-top:60px;
-    border-top: 4px solid @background-dark;
+    border-top: 4px solid @gray-darkest;
 }
 footer .footer-banners .bannergroup {
     padding: 0px 100px 30px;
@@ -195,7 +115,7 @@ form.footer-signup {
             background-color: transparent;
             border: none;
             font-size: 1.2em;
-            color: @footer-text-color;
+            color: @t3-footer-text-color;
         }    
         &.email-input:focus {
         	box-shadow: none;
@@ -205,7 +125,7 @@ form.footer-signup {
         // &.email-input::-moz-placeholder,
         // &.email-input::-ms-placeholder,
         &.email-input::placeholder {
-          color: @footer-text-color;
+          color: @t3-footer-text-color;
         }
     }
 }
@@ -229,7 +149,6 @@ footer .footer-spotlight .advert img {
         	display: table-cell;
         	vertical-align: bottom;
         	font-size: 12px;
-            margin-bottom: 4px;
         }	
         > div {
         	float: right;
@@ -240,10 +159,10 @@ footer .footer-spotlight .advert img {
             }
             > ul li {
                 display: inline-block;
-                padding: 0px 20px 10px 0px;
+                padding: 0px 20px 5px 0px;
                 a {
                     font-size: .75rem;
-                    color: @footer-text-color;
+                    color: @t3-footer-text-color;
                 }
             }
         }
@@ -268,34 +187,95 @@ footer .footer-spotlight .advert img {
     margin-bottom: 50px !important;
 }
 
-/* SOCIAL 
+
+/* FOOTER SOCIAL -- used in drawer as well
 -------------------- */
-.block-inner .post-inner {
-    padding: 130px 200px 70px;
-    text-align: center;
+.footer-social {
+    background-color: #000;
+    position: relative;
+    float: left;
+    width: 100%;
 }
-.block-inner .post-inner h3 {
-    margin-bottom: 30px;
-}
-.block-inner .post-inner h3 a {
-    color: rgba(184, 184, 184, 0.6) !important;
-    transition: 0.5s color;
-}
-.block-inner .post-inner h3 a:hover, .block-inner .post-inner h3 a:focus {
-    color: rgba(184, 184, 184, 1) !important;
-}
-.block-inner .post-inner .post-text {
-    color: @background-dark;
-}
-.block-inner .post-inner .post-text .red, .block-inner .post-inner .post-date a {
-    color: @red;
-}
-.block-inner .post-inner .post-date {
-    margin-top: 50px;
+.mob-social {
+    background-color: #000;
+    position: absolute;
     display: block;
-    color: rgba(184, 184, 184, 0.6) !important;
+    left: 0;
+    bottom: 0;
 }
-.block-inner .post-inner .post-date p a {
-    display: block;
-    margin-top: 10px;
+
+.footer-social-wrap,
+.mob-social-wrap {
+    display: table;
+    position: relative;
+    width: 100%;
+    ul{
+        background-color: #1b1b1b;
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;    
+        li {
+            float: none !important;
+            margin:0px !important;
+            text-align: center !important;
+            display: table-cell;
+            width: auto;
+            vertical-align: middle;
+            a {
+                width: 100%;
+                height: 100%;
+                display: block;
+                text-decoration: none !important;
+                padding: 25px 0px;
+                span {
+                    font-size: 1.8em !important;
+                }
+            }
+        }  
+    }
+    .foundicon-facebook{
+        color: #3b5998 !important;
+    }
+    .foundicon-twitter{
+        color: #00aced !important;
+    }
+    .foundicon-torso{
+        color: #51c332 !important;
+    }
+    .foundicon-tumblr{
+        color: #e6162d !important;
+    }
+    .foundicon-linkedin {
+        color: #0077b5 !important;
+    }
+    .foundicon-instagram{
+        color: #bf4030 !important;
+    }
 }
+
+
+.footer-social .footer-social-wrap ul li:nth-child(odd) {
+    background-color:@gray-darkest;
+}
+
+.mob-social .mob-social-wrap ul li:nth-child(odd) {
+    background-color:@gray-darkest;
+}
+
+
+/* wechat qr code popup
+-------------------- */
+.wechatQR {
+    position: absolute;
+    transform: translate(-100%, -55%);
+}
+.block-header .wechatQR {
+    transform: translate(-100%, -50%);
+}
+.mob-social .wechatQR {
+    transform: translate(-65%, -85%);
+}
+
+
