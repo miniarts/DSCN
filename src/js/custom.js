@@ -34,6 +34,7 @@
                     $(wechatbtn).addClass('qr-on');
                     $(wechatbtn).append("<div class='wechatQR'><img src='/images/system/wechat-qr-V2.png'></div>").fadeIn();
                 }
+                return false;
             },
             wechatSocial: function(){
                 var $wechatSocial = $('#socialicons .foundicon-torso').parent('a');
@@ -42,6 +43,7 @@
                         event.preventDefault();
                         app.wechatQR(this);
                 });
+                return false;
             },
             burgerIcon: function(){
                 var $btn = $('#mob-navbar-btn'),
@@ -56,6 +58,7 @@
                         $wrapper.removeClass('mobnav-open');
                     }
                 });
+                return false;
             },
             transitionDelay: function(el, speed){
                 var docElemStyle = document.documentElement.style,
@@ -63,7 +66,8 @@
 
                     $.each(el, function(index){
                         $(this).css(transitionProp + 'Delay', index*speed + 'ms');
-                    });      
+                    });  
+                return false;    
             },
             setDrawer: function(){
                 var $items = $('#mob-navbar .navbar-inner .navbar-nav > li');
@@ -83,12 +87,15 @@
 
                 $(window).resize(setLineHeight);
 
+                return false;
+
             },
             scrollToTop: function(){
                 $("#back-to-top").click(function (e) {
                     e.preventDefault();
                     $("html, body").animate({scrollTop: 0}, 500);
                 });
+                return false;
             },
             backToTop: function(){
                 var $backToTop = $('#back-to-top'),
@@ -99,6 +106,7 @@
 
                     $body.stop().animate({scrollTop:0}, 500, 'swing');
                 });
+                return false;
             },
             onDemandNav :function(){    
                 //NOTE: modified to make it understandable but needs more work 
@@ -170,6 +178,7 @@
                 $(window).on('orientationchange', function() {
                     init();
                 });
+                return false;
             }
         };
   

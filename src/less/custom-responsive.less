@@ -4,10 +4,13 @@
 	- Css by:   Joe Thom
 	- Version:  1.0.0
 
-	NOTE by Kaori: 
-		differs from bootstrap definition
-		why max-width only?  
+	NOTES by Kaori: 
+		- differs from bootstrap definition
+		- why only max-width is used?  
+
+		I corrected as much as I could, but still loads of stuff left
 */	
+
 
 @media (min-width: @screen-lg-min){
 	body {
@@ -18,80 +21,11 @@
 /* LAPTOP
 ============================== */
 @media (max-width: @screen-md-max) {
-// 	/* GLOBAL
-// -------------------- */
-// 	body {
-// 		font-size: 52%;
-// 	}
 
-// 	/* HEADER
-// -------------------- */
-// 	.t3-wrapper {
-// 		padding-top:135px;
-// 	}
-// 	.itemid-101 .t3-wrapper {
-// 		padding-top:102px;
-// 	}
-// 	body.headerShow #t3-header, #t3-header {
-//     	height: 102px;
-//     }
-//     .t3-header .logo .logo-image img {
-// 	    width: 120px;
-// 	}
-// 	.t3-header .logo-image .inthecity-logo img {
-// 		width: 210px;
-// 	}
-//     .breadcrumbs {
-// 		top:102px;
-// 	}
-// 	.inthecity .breadcrumb {
-// 	    padding-left: 245px;
-// 	}
-// 	.t3-header .main-navbar {
-//     	top: 33px;
-//         right: 30px;
-//     }
-//     .t3-header .logo {
-//     	left: 30px;
-//     }
-// 	.breadcrumb {
-// 		padding-left: 155px;
-// 	}
-// 	.prev-page {
-// 	    padding-right: 15px;
-// 	}
-
-// 	/* BODY
-// -------------------- */	
-// 	html.view-category.banner-flip .t3-content .blog.banner {
-// 	    position: absolute;
-// 	    top: 128px;
-// 	}
-	
-// 	/* FOOTER
-// -------------------- */		
-// 	// footer .footer-spotlight .container-fluid .row > div:nth-child(4) {
-// 	// 	clear: left;
-// 	// }
-// 	.bannergroup .banneritem {
-// 	    width: 10%;
-// 	    padding-top: 10%;
-//     }
-// }
-
-
-/* LG > - bootstrap break point for lg is 1200px */
-//@media (max-width: @screen-md-max){	
 	footer .footer-spotlight .container-fluid .row > div:nth-child(4) {
 		clear: left;
 	}
-//}
 
-/* SMALL LAPTOP
-============================== */
-//@media (max-width: 1179px) {
-	/* GLOBAL
--------------------- */
 
 	/* HEADER
 -------------------- */
@@ -107,15 +41,7 @@
 	#mob-navbar {
 		display: block;
 	}
-	// #mob-navbar .navbar-inner .navbar-nav > li > a {
-	   
-	// }    
-	
-	/* BODY
--------------------- */
-	// .mainbody-topblocks .block-header a, .mainbody-bottomblocks .block-header a {
-	    
-	// }
+
 	.mainbody-topblocks .block-inner > .custom, 
 	.mainbody-bottomblocks .block-inner > .custom {
 	    padding: 110px 50px 60px;
@@ -128,13 +54,7 @@
     .itemid-179 body #t3-mainbody .mnwall_container.subpage-list .mnwall-item  {
 	    width: 50% !important;
     }
-//}
 
-
-/* IPAD LANDSCAPE
-============================== */
-//@media (max-width: 1023px) {
-	
 	
 	/* FOOTER
 -------------------- */		
@@ -143,9 +63,6 @@
 		position: relative;
 		bottom: 5px;
 	}
-	// .content-footer .a2a_kit {
-	// 	padding-left: 50px;
-	// }
 	.content-footer .a2a_kit a { 
 		padding-left: 0px !important;
 	    padding-top: 5px !important;
@@ -186,20 +103,11 @@
 /* IPAD PORTAIT
 ============================== */
 @media (max-width: @screen-sm-max) {	
-	/* GLOBAL
--------------------- */
-	// body {
-	// 	font-size: 52%;	
-	// }
+
 	.view-article .t3-mainbody, .view-article .t3-mainbody .content-main {
 		display: block;
 	}
-	.t3-wrapper {
-	    padding-top: 137px;
-	}
-	
-	/* HEADER
--------------------- */	
+
 	.t3-header .main-navbar {
         right: 30px;
     }
@@ -212,13 +120,6 @@
 	.inthecity .breadcrumb {
 	    padding-left: 230px;
 	}
-	// .t3-content .item-page .page-split.page-header {
-	// 	padding-top: 60px;
-	// 	padding-bottom: 40px;
-	// }
-	// #mob-navbar .navbar-inner .navbar-nav > li > a {
-	    
-	// } 
 	
  	/* BODY
 -------------------- */ 
@@ -234,23 +135,18 @@
 	
 	html body #t3-content .item-page .page-header, /*override buyerform.css*/
     .mainbody-topblocks .block-header, .mainbody-bottomblocks .block-header, 
-    // .t3-content .item-page .page-split.page-header, 
     .mainbody-topblocks .block-inner > .custom, 
     .mainbody-bottomblocks .block-inner > .custom {
 	    padding-top: 60px;
     }
-    // .a2a-page-share h6, 
     .mainbody-topblocks .block-header, 
     .mainbody-bottomblocks .block-header, 
-    // .t3-content .item-page .page-split.page-header, 
     .t3-content .item-page .page-split.page-content > div[itemprop="articleBody"], 
     .mainbody-topblocks .block-inner > .custom, 
     .mainbody-bottomblocks .block-inner > .custom, 
     .t3-content .blog .category-desc,
     .a2a-page-share,
     .mnw-results-empty-results,
-    // .t3-content .blog .page-header, 
-    // .content-footer .a2a_kit, 
     .back-to-top-wrap, 
     .footer-copyright-wrap, 
     .mainbody-bottomblocks .bannergroup, 
@@ -291,7 +187,6 @@
     }
     
    
-    
    /* FOOTER
 -------------------- */	
     footer .footer-spotlight .container-fluid .row > div {
@@ -308,10 +203,7 @@
     footer .footer-banners .bannergroup {
     	padding: 0px 30px 30px;
     }
-  //   .bannergroup .banneritem {
-  //       width: 14%;
-		// padding-top: 14%;
-  //   }
+
   	.content-footer.page-navigation .navigation.post-navigation, 
 	.content-footer.page-navigation .navigation.post-navigation .nav-links, 
 	.content-footer.page-navigation .page-navigation {
@@ -332,26 +224,6 @@
     	width: 100%;
     }
 
-//}    
-
-/* IPAD > MOBILE
-============================== */
-//@media (max-width: 767px) {	
-	
-	// .content-footer.page-navigation .navigation.post-navigation, .content-footer.page-navigation .navigation.post-navigation .nav-links, .content-footer.page-navigation .page-navigation {
-	// 	width: 100% !important;
-	//     margin-top: 0px !important;		
-	// }
-	// .content-footer.page-navigation .back-to-top-wrap {
-	// 	position: absolute;
-	//     white-space: nowrap;
-	//     right: 0;
-	//     -webkit-transform: translateY(-100%);
-	//     -moz-transform: translateY(-100%);
-	//     -o-transform: translateY(-100%);
-	//     transform: translateY(-100%);
-	// }
-	
 	/* FOOTER
 -------------------- */		
 	#footer-leaderboard {
@@ -414,48 +286,10 @@
 		    right: 20px;
 	    }
 	}
-// 	.t3-header .logo {
-// 		left: 10px;
-// 		top:15px;
-// 	}
-// 	.t3-header .logo .logo-image img {
-// 	    width: 115px;
-// 	}
-// 	.t3-header .logo-image .inthecity-logo img {
-// 		width: 200px;
-// 	}
-// 	.t3-header .logo .head-info {
-// 		margin-left: 10px;
-// 	}
-// 	.t3-header .logo .head-info .head-sponsor {
-// 	    position: absolute;
-// 	}
-// 	.t3-header .logo .head-info .head-sponsor .custom {
-// 		display: table;
-// 	}
-// 	.t3-header .logo .head-info .head-sponsor p {
-// 		display: table-cell;
-// 		vertical-align: middle;
-// 		padding-right: 5px;
-// 	}
-// 	.t3-header .logo .head-info .head-sponsor p img {
-//     	width: 30px;
-//     	margin-top:0px;
-//     }
-//     .t3-header .logo .head-info .head-dates {
-//         position: relative;
-// /* 	    top: 35px; */
-// 	    padding-left: 0px;
-//     }
-//     .t3-header .logo .head-info .head-dates p {
-// 	    font-size: 1.7em;
-//     }
+
     #mob-navbar-btn .msg-wrap {
 	    display: none;
     }
-    // .t3-header .main-navbar {
-	   //  right: 20px;
-    // }
     .prev-page {
 	    padding-top:8px;
 	    padding-bottom: 8px;
@@ -495,46 +329,21 @@
 	
  	/* BODY
 -------------------- */ 
-	.view-category .banner {height: 85%}
-	html.view-category.banner-flip .banner .banner-img, html.view-category .banner .banner-img {
+	//.view-category .banner {height: 85%}
+	html.view-category.banner-flip .banner .banner-img, 
+	html.view-category .banner .banner-img {
 		top:0px;
-		bottom: 15% !important;
+		bottom: 13% !important;
 	}
 	html.view-category.banner-flip .t3-content .blog.banner {
 		position: static !important;
 	}
-	// .t3-content .blog.banner .page-header {
-	// 	position: static !important;
-	// 	padding-top: 0px !important;
-	// 	-webkit-transform: 	translateY(0);
-	//     -moz-transform: 	translateY(0);
-	//     -o-transform: 		translateY(0);
-	//     transform: 			translateY(0);
-	// }
-	// .page-title-wrap {
-	// 	display: block;
-	//     position: absolute;
-	//     -webkit-transform: 	translateY(-100%);
-	//     -moz-transform: 	translateY(-100%);
-	//     -o-transform: 		translateY(-100%);
-	//     transform: 			translateY(-100%);
-	//     background: inherit;
-	//     left: 0;
-	//     right: 0;
-	// }
-	// .page-title-wrap h1 {
-	//     margin: 60px 25px 40px !important;
-	// }
+
 	.page-title-wrap h1, 
 	.block-header h3, 
 	.t3-content .item-page .page-split.page-header .header-inner h1 {
 		font-size: 3em !important;
 	}    
-	
-	// .a2a-page-share h6, .mainbody-topblocks .block-header, .mainbody-bottomblocks .block-header, .t3-content .item-page .page-split.page-header, .t3-content .item-page .page-split.page-content > div[itemprop="articleBody"], .mainbody-topblocks .block-inner > .custom, .mainbody-bottomblocks .block-inner > .custom, .t3-content .blog .category-desc, .t3-content .blog .page-header, .content-footer .a2a_kit, .back-to-top-wrap, .footer-copyright-wrap, .mainbody-bottomblocks .bannergroup, .schedule-list .tab-content .jux-tl-item, .schedule-list .nav-tabs  {
-	//     padding-left: 25px;
-	//     padding-right: 25px;
-	// }
 	
 	.content-footer .a2a_kit a {
     	padding-right: 15px !important;
@@ -548,7 +357,6 @@
     .banner-content-inner {
     	padding: 40px 0px 0;
     	font-size: 90%;
-	    width: 69%;
     }
     .block-inner .ug-theme-carousel .ug-thumb-wrapper.ug-tile {
 		width:280px !important;
@@ -567,37 +375,31 @@
 	    padding-left: 25px !important;
 	    padding-right: 25px !important;
     }
-    // .bannergroup .banneritem {
-	   //  width: 25%;
-	   //  padding-top: 25%;
-    // }
-
 	
 	/* MODULES
 -------------------- */	
 	body #t3-mainbody #t3-content .mnwall_container .mnwall-item {
 		width: 100% !important;
 	}
-	body #t3-mainbody .mnwall_container.home-sections .mnwall-item, body #t3-mainbody .mnwall_container.subpage-list .mnwall-item {
+	body #t3-mainbody .mnwall_container.home-sections .mnwall-item, 
+	body #t3-mainbody .mnwall_container.subpage-list .mnwall-item {
 		padding-top:180px !important;
 	}
-	body #t3-mainbody .mnwall_container.home-sections .mnwall-item:nth-child(4), body #t3-mainbody .mnwall_container.home-sections .mnwall-item:nth-child(5) {
+	body #t3-mainbody .mnwall_container.home-sections .mnwall-item:nth-child(4), 
+	body #t3-mainbody .mnwall_container.home-sections .mnwall-item:nth-child(5) {
 	    width: 100% !important;
 	}
 	body #t3-mainbody .mnwall_container.exhibitor-list .mnwall-item {
     	width: 100% !important;
     	padding-top: 260px !important;
     }
-//     .mnwall_container.exhibitor-list .mnwall-item:nth-child(5), .mnwall_container.exhibitor-list .mnwall-item:nth-child(6), .mnwall_container.exhibitor-list .mnwall-item:nth-child(7), .mnwall_container.exhibitor-list .mnwall-item:nth-child(8) {
-// /* 	    display: none; */
-//     }
     body #t3-mainbody .mnwall_container.news-list .mnwall-item {
     	width: 100% !important;
     }
-//     .mnwall_container.news-list .mnwall-item:nth-child(3) {
-// /* 	    display: none; */
-//     }
-    .mainbody-topblocks .block-header a, .mainbody-bottomblocks .block-header a, .block-inner .block-header #socialicons {
+
+    .mainbody-topblocks .block-header a, 
+    .mainbody-bottomblocks .block-header a, 
+    .block-inner .block-header #socialicons {
         display: table-footer-group;
 		line-height: 50px;
 		float: none;
@@ -612,9 +414,6 @@
     .mainbody-topblocks .block-header p, .mainbody-bottomblocks .block-header p {
 	    display: table-footer-group;
     }
-
-    
-    
     
     .mnwall_container.news-list .mnwall-item-inner .mnwall-title a {
 	    width: 100%;
@@ -629,32 +428,7 @@
 	exhibitor.css has this width and need to match
 ============================== */
 @media (max-width: @screen-xxs-max) {	
-	/* GLOBAL
--------------------- */ 
-	// body {
-	//     font-size: 50%;
-	// }
-
-	/* HEADER
-// -------------------- */
-// 	.t3-wrapper {
-// 		padding-top:132px;
-// 	}
-// 	.itemid-101 .t3-wrapper {
-// 		padding-top:105px;
-// 	}
-// 	body.headerShow #t3-header, #t3-header {
-//     	height: 105px;
-//     }
-//     .breadcrumbs {
-// 		top:105px;
-// 	}
-// 	.t3-header .logo .logo-image img {
-// 	    width: 110px;
-// 	}	
-// 	.t3-header .logo-image .inthecity-logo img {
-// 		width: 200px;
-// 	}
+	
 	.t3-header .logo .head-info .head-dates p {
 	    font-size: 1.6em;
 	}
@@ -666,20 +440,8 @@
 -------------------- */	
 	.banner-content-inner {
     	padding: 15px 0px 0;
-    	font-size: 80%;
-	    // width: 69%;
     }
-	// .page-title-wrap h1 {
-	//     margin: 60px 20px 40px !important;
-	// }	 
-	// .a2a-page-share h6, .mainbody-topblocks .block-header, .mainbody-bottomblocks .block-header, .t3-content .item-page .page-split.page-header, .t3-content .item-page .page-split.page-content > div[itemprop="articleBody"], .mainbody-topblocks .block-inner > .custom, .mainbody-bottomblocks .block-inner > .custom, .t3-content .blog .category-desc, .t3-content .blog .page-header, .content-footer .a2a_kit, .back-to-top-wrap, .footer-copyright-wrap, .mainbody-bottomblocks .bannergroup, .schedule-list .tab-content .jux-tl-item, .schedule-list .nav-tabs  {
-	//     padding-left: 20px;
-	//     padding-right: 20px;
-	// }   
-	// .mnwall_iso_filters .button-group-category {
-	//     max-width: calc(100% + 20px);
-	//     float: left;
-	//}
+	
 	.schedule-list .nav-tabs li a {
     	padding: 25px 10px;
     }
@@ -690,9 +452,6 @@
 	    padding-left: 20px !important;
 	    padding-right: 20px !important;
     }	
-	// .bannergroup .banneritem {
-	//     width: 33.333%;
-	//     padding-top: 33.333%;
- //    }
+
 }	
 
