@@ -2,7 +2,6 @@
     Different from English version
 */
 
-
 /* MINITEK WALL
 -------------------- */
 /* search box */
@@ -192,7 +191,6 @@ body #t3-mainbody .mnwall_container{
 
 /* subpage list
 --------------- */
-
     &.subpage-list,
     &.news-list{
         .mnwall-item {
@@ -347,36 +345,88 @@ body #t3-mainbody .mnwall_container{
     }
 }
 
-/* VIDEO LIST
+/* VIDEO LIST -- have lots of !important to override the original :-(
 -------------------- */
-.video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
-    width: 50% !important;
-    position: relative !important;
-    float: left !important;
-    left: 0px !important;
-    top: 0px !important;
-    padding-top: 23% !important;
-    height: auto !important;
-}
-.ug-tile .ug-textpanel-title {
-    position: static !important;
-    padding: 19px;
-    .ug-textpanel {
-        height: auto !important;
+.video-list{
+    .ug-theme-tilesfixed .ug-thumb-wrapper {
+        width: 25% !important;
+        @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max){
+            width:50% !important;
+        }
+        @media (max-width: @screen-sm-max){
+            height: 200px !important;
+        }
+        @media (max-width: @screen-xs-max){
+            width: 100% !important;
+        }
+    }
+    .ug-tile{
+        .ug-textpanel-title {
+            position: static !important;
+            padding: 1rem;
+            font-size: 1rem;
+            line-height: @line-height-base;
+            text-align: center;
+            font-weight: 400;
+        }    
+    }
+    .ug-textpanel-bg{
+        background-color: rgba(0, 0, 0, 0.5) !important;
+    }
+    .ug-thumb-wrapper.ug-tile .ug-tile-icon{
+        top: 30% !important;
     }
 }
 
+/* COMMON STYLES: PRESS COVERAGE LIST &  VIDEO LIST
+-------------------- */
+.video-list,
+.press-coverage-list{
+    .ug-thumb-wrapper .ug-thumb-overlay{
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .ug-thumb-wrapper.ug-tile .ug-tile-icon,
+    .ug-textpanel-title,
+    .ug-textpanel-textwrapper.ug-trans-enabled, 
+    .ug-textpanel.ug-trans-enabled,
+    .ug-gallery-wrapper .ug-textpanel-bg{
+        width: 100% !important;
+    }
+    img.ug-thumb-image{
+        left: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+        top: 0 !important;
+        object-fit:cover;
+    }
+    .ug-textpanel-textwrapper.ug-trans-enabled, 
+    .ug-textpanel.ug-trans-enabled {
+        left: 0px !important;
+        top: initial !important;
+        overflow: visible !important;
+        z-index: 2;
+    }
+    .ug-thumb-wrapper.ug-tile .ug-tile-icon{
+        background-position: center top !important;
+        left: 0 !important;
+    }
+}
 
 /* PRESS COVERAGE LIST
 -------------------- */
 .press-coverage-list .ug-theme-tilesfixed .ug-thumb-wrapper {
-	width: 16.66666666% !important;
-	position: relative !important;
-    float: left !important;
-    left: 0px !important;
-    top: 0px !important;
+    width: calc(100%/6) !important;
     padding-top: 23% !important;
-    height: auto !important;
+    background: @black !important;
+    
+    @media (max-width: (@screen-xs-min - 1)){
+        width: 50% !important;
+        height: 200px !important;
+        img.ug-thumb-image{
+            object-fit: contain;
+        }
+    }
 } 
 
 /* BANNERS 
@@ -422,7 +472,6 @@ body #t3-mainbody .mnwall_container{
 .mainbody-bottomblocks .bannergroup {
     padding: 19px 50px;	
 }
-
 
 
 /* exhibitor list
@@ -472,7 +521,7 @@ body #t3-mainbody .ExhibitorsOutput{
     }
 }
 
-/* hide link through
+/* hide link through -- ??
 --------------- */
 // .mnwall_container.speakers-list .mnwall-photo-link {
 //     background-position: center center;

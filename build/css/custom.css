@@ -4,21 +4,18 @@
 
     Modified plain css to less and split it into smaller files.  They are in /less/custom.
     This is a compiled version.
+    
+    If you don't want to use LESS, uncomment the links in the head.php. Then remove custom styles in the template.less and compile in Joomla. 
+    I've sent an instruction with a link and shown Terry what to do.  Good luck!
+
+	
+	Warnings:
+    Too many !important declarations (161), try to use less than 10 to avoid specificity issues.
+	Too many font-size declarations (70), abstraction needed.
+	Too many floats (23), you're probably using them for layout. Consider using a grid system instead.
+	You have 20 h1s, 5 h2s, 26 h3s, 8 h4s, 5 h5s, 8 h6s defined in this stylesheet.
 */
-/** 
- *------------------------------------------------------------------------------
- * @package       T3 Framework for Joomla!
- *------------------------------------------------------------------------------
- * @copyright     Copyright (C) 2004-2013 JoomlArt.com. All Rights Reserved.
- * @license       GNU General Public License version 2 or later; see LICENSE.txt
- * @authors       JoomlArt, JoomlaBamboo, (contribute to this project at github 
- *                & Google group to become co-author)
- * @Google group: https://groups.google.com/forum/#!forum/t3fw
- * @Link:         http://t3-framework.org 
- *------------------------------------------------------------------------------
- */
-/* joomla 3.x 400px */
-/* CUSTOM */
+
 /* RESET
 ============================== */
 html,
@@ -519,6 +516,7 @@ body .banner .site-btn {
   height: 100%;
   width: 50px;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,f5f5f5+100&0+0,1+100 */
+  /** who has done this crazy thing! we used to do this 10 years ago :-D **/
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(rgba(245, 245, 245, 0)), to(#f5f5f5));
@@ -656,6 +654,7 @@ body .banner .site-btn {
   bottom: 0;
   z-index: 1;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+50,000000+100&1+0,0+100 */
+  /** who has done this crazy thing! we used to do this 10 years ago :-D **/
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: -webkit-gradient(linear, left top, right top, from(#000000), color-stop(50%, rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
@@ -2180,34 +2179,98 @@ body #t3-mainbody .mnwall_container.subpage-list .mnwall-item-inner .mnwall-titl
   z-index: 2;
   color: #777;
 }
-/* VIDEO LIST
+/* VIDEO LIST -- have lots of !important to override the original :-(
 -------------------- */
 .video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
-  width: 50% !important;
-  position: relative !important;
-  float: left !important;
-  left: 0px !important;
-  top: 0px !important;
-  padding-top: 23% !important;
-  height: auto !important;
+  width: 25% !important;
 }
-.ug-tile .ug-textpanel-title {
+@media (min-width: 600px) and (max-width: 991px) {
+  .video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
+    width: 50% !important;
+  }
+}
+@media (max-width: 991px) {
+  .video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
+    height: 200px !important;
+  }
+}
+@media (max-width: 599px) {
+  .video-list .ug-theme-tilesfixed .ug-thumb-wrapper {
+    width: 100% !important;
+  }
+}
+.video-list .ug-tile .ug-textpanel-title {
   position: static !important;
-  padding: 19px;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.42857143;
+  text-align: center;
+  font-weight: 400;
 }
-.ug-tile .ug-textpanel-title .ug-textpanel {
-  height: auto !important;
+.video-list .ug-textpanel-bg {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+.video-list .ug-thumb-wrapper.ug-tile .ug-tile-icon {
+  top: 30% !important;
+}
+/* COMMON STYLES: PRESS COVERAGE LIST &  VIDEO LIST
+-------------------- */
+.video-list .ug-thumb-wrapper .ug-thumb-overlay,
+.press-coverage-list .ug-thumb-wrapper .ug-thumb-overlay {
+  height: 100% !important;
+  width: 100% !important;
+}
+.video-list .ug-thumb-wrapper.ug-tile .ug-tile-icon,
+.press-coverage-list .ug-thumb-wrapper.ug-tile .ug-tile-icon,
+.video-list .ug-textpanel-title,
+.press-coverage-list .ug-textpanel-title,
+.video-list .ug-textpanel-textwrapper.ug-trans-enabled,
+.press-coverage-list .ug-textpanel-textwrapper.ug-trans-enabled,
+.video-list .ug-textpanel.ug-trans-enabled,
+.press-coverage-list .ug-textpanel.ug-trans-enabled,
+.video-list .ug-gallery-wrapper .ug-textpanel-bg,
+.press-coverage-list .ug-gallery-wrapper .ug-textpanel-bg {
+  width: 100% !important;
+}
+.video-list img.ug-thumb-image,
+.press-coverage-list img.ug-thumb-image {
+  left: 0 !important;
+  height: 100% !important;
+  width: 100% !important;
+  top: 0 !important;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.video-list .ug-textpanel-textwrapper.ug-trans-enabled,
+.press-coverage-list .ug-textpanel-textwrapper.ug-trans-enabled,
+.video-list .ug-textpanel.ug-trans-enabled,
+.press-coverage-list .ug-textpanel.ug-trans-enabled {
+  left: 0px !important;
+  top: initial !important;
+  overflow: visible !important;
+  z-index: 2;
+}
+.video-list .ug-thumb-wrapper.ug-tile .ug-tile-icon,
+.press-coverage-list .ug-thumb-wrapper.ug-tile .ug-tile-icon {
+  background-position: center top !important;
+  left: 0 !important;
 }
 /* PRESS COVERAGE LIST
 -------------------- */
 .press-coverage-list .ug-theme-tilesfixed .ug-thumb-wrapper {
-  width: 16.66666666% !important;
-  position: relative !important;
-  float: left !important;
-  left: 0px !important;
-  top: 0px !important;
+  width: calc(16.66666667%) !important;
   padding-top: 23% !important;
-  height: auto !important;
+  background: #000 !important;
+}
+@media (max-width: 479px) {
+  .press-coverage-list .ug-theme-tilesfixed .ug-thumb-wrapper {
+    width: 50% !important;
+    height: 200px !important;
+  }
+  .press-coverage-list .ug-theme-tilesfixed .ug-thumb-wrapper img.ug-thumb-image {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
 }
 /* BANNERS 
 -------------------- */
@@ -2298,7 +2361,7 @@ body #t3-mainbody .ExhibitorsOutput .mnwall-item:hover .mnwall-item-inner {
   background: rgba(0, 0, 0, 0) !important;
   max-height: 100%;
 }
-/* hide link through
+/* hide link through -- ??
 --------------- */
 /* halls subpage list
 --------------- */

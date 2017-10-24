@@ -2,7 +2,18 @@
 	Show:		Design Shanghai	
     Author:     Kaori
 
-    Modified plain css to less and sprit it into smaller files :-)
+    Modified plain css to less and split it into smaller files.  They are in /less/custom.
+    This is a compiled version.
+    
+    If you don't want to use LESS, uncomment the links in the head.php. Then remove custom styles in the template.less and compile in Joomla. 
+    I've sent an instruction with a link and shown Terry what to do.  Good luck!
+
+	
+	Warnings:
+    Too many !important declarations (161), try to use less than 10 to avoid specificity issues.
+	Too many font-size declarations (70), abstraction needed.
+	Too many floats (23), you're probably using them for layout. Consider using a grid system instead.
+	You have 20 h1s, 5 h2s, 26 h3s, 8 h4s, 5 h5s, 8 h6s defined in this stylesheet.
 */
 
 @import 'variables-bs.less';
